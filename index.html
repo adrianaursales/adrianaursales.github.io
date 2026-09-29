@@ -5,111 +5,258 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Adriana Ursales — ThetaHealing®</title>
 <style>
-:root{--cream:#fbf4ed;--mauve:#713d59;--gold:#b8864b;--text:#3d2a34;}
-*{box-sizing:border-box} body{margin:0;font-family:Georgia,serif;color:var(--text);background:var(--cream);line-height:1.6}
-nav{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:#fffaf6;position:sticky;top:0;z-index:5}
-.logo{font-size:25px;font-style:italic;color:var(--mauve)} nav a{margin-left:20px;color:var(--text);text-decoration:none;font-size:14px}
-.btn{display:inline-block;background:var(--mauve);color:white;padding:13px 22px;border-radius:28px;text-decoration:none}
-.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px 8%;background:linear-gradient(120deg,#f7e9df,#fffaf5)}
-.hero h1{font-size:64px;line-height:1.05;margin:10px 0;color:var(--mauve);font-style:italic}
-.hero h2{letter-spacing:7px;font-weight:400} .hero p{font-size:20px;max-width:550px}
-.hero img{width:100%;max-height:600px;object-fit:cover;border-radius:180px 180px 30px 30px;box-shadow:0 20px 60px #6d465033}
-section{padding:75px 8%} .center{text-align:center} h3{font-size:40px;color:var(--mauve);margin:8px 0 35px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px} .card{background:white;padding:30px;border-radius:24px;box-shadow:0 10px 35px #6d46501a}
-.quote{background:#ead8df;text-align:center;font-size:30px;font-style:italic;color:var(--mauve);padding:70px 12%}
-.contact{background:#6f3b57;color:white;text-align:center} .contact h3{color:white}
-footer{padding:25px;text-align:center;background:#4c273a;color:white;font-size:13px}
-.teme-section{display:grid;grid-template-columns:0.9fr 1.1fr;gap:55px;align-items:center;background:#fffaf6;padding:75px 8%}
-.teme-image img{width:100%;display:block;border-radius:30px;box-shadow:0 15px 40px #6d465033}
-.teme-content h3{margin-bottom:20px}
-.teme-content p,.teme-content li,#anxietate p,#anxietate li{font-size:18px}
-.teme-content ul,#anxietate ul{padding-left:25px}
-.teme-content li,#anxietate li{margin-bottom:10px}
-#anxietate{padding:75px 8%}
-#anxietate .center{margin-bottom:40px}
-#anxietate .card{max-width:800px;margin:auto}
-@media(max-width:800px){nav a{display:none}.hero{grid-template-columns:1fr;padding:45px 7%}.hero h1{font-size:46px}.cards{grid-template-columns:1fr}.teme-section{grid-template-columns:1fr;gap:30px}}
+:root{--cream:#faf7f4;--mauve:#5a3d47;--gold:#a67c52;--text:#2d2520;--light-text:#6b5f57;--bg-light:#f5f1ed;--border:#e8dfd8;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--text);background:var(--cream);line-height:1.7;letter-spacing:0.3px}
+nav{padding:24px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.95);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.logo{font-size:22px;font-weight:600;color:var(--mauve);letter-spacing:0.5px}
+.logo small{display:block;font-size:10px;letter-spacing:2px;margin-top:4px;color:var(--gold);font-weight:500}
+nav div{display:flex;gap:40px}
+nav a{color:var(--light-text);text-decoration:none;font-size:14px;font-weight:500;transition:color 0.3s ease;position:relative}
+nav a:hover{color:var(--mauve)}
+.btn{display:inline-block;background:var(--mauve);color:white;padding:14px 28px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:600;transition:all 0.3s ease;letter-spacing:0.5px;border:2px solid var(--mauve)}
+.btn:hover{background:transparent;color:var(--mauve)}
+.btn-secondary{background:transparent;color:var(--mauve);border:2px solid var(--mauve)}
+.btn-secondary:hover{background:var(--mauve);color:white}
+.hero{min-height:700px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:80px 7%;background:linear-gradient(135deg,#faf7f4 0%,#f5f1ed 100%)}
+.hero-content h1{font-size:56px;line-height:1.2;margin:0 0 20px 0;color:var(--mauve);font-weight:700;letter-spacing:-0.5px}
+.hero-content .subtitle{font-size:18px;color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:30px}
+.hero-content p{font-size:18px;color:var(--light-text);margin:0 0 20px 0;max-width:500px}
+.hero-content .cta-group{display:flex;gap:20px;margin-top:40px}
+.hero img{width:100%;height:600px;object-fit:cover;border-radius:8px;box-shadow:0 20px 60px rgba(90,61,71,0.15)}
+section{padding:100px 7%}
+section.alt{background:var(--bg-light)}
+.section-header{text-align:center;margin-bottom:70px}
+.section-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:15px}
+h2{font-size:44px;color:var(--mauve);margin:0;font-weight:700;letter-spacing:-0.5px}
+h3{font-size:28px;color:var(--mauve);margin:0;font-weight:600;letter-spacing:-0.3px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:50px}
+.card{background:white;padding:40px;border-radius:8px;border:1px solid var(--border);box-shadow:0 4px 15px rgba(0,0,0,0.05);transition:all 0.3s ease}
+.card:hover{box-shadow:0 12px 30px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.card h3{font-size:22px;margin-bottom:18px}
+.card p{color:var(--light-text);font-size:16px;line-height:1.8}
+.quote{background:white;border-left:4px solid var(--gold);padding:60px;margin:80px 7%;text-align:center;border-radius:4px;box-shadow:0 4px 15px rgba(0,0,0,0.05)}
+.quote p{font-size:24px;color:var(--mauve);font-weight:500;margin:0;line-height:1.8;font-style:italic}
+.quote-author{font-size:14px;color:var(--gold);margin-top:20px;font-weight:600;letter-spacing:1px}
+.teme-section{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-top:50px}
+.teme-image{overflow:hidden;border-radius:8px;box-shadow:0 20px 60px rgba(90,61,71,0.15)}
+.teme-image img{width:100%;height:100%;object-fit:cover;display:block}
+.teme-content h3{margin-bottom:25px}
+.teme-content p{color:var(--light-text);font-size:17px;margin-bottom:20px;line-height:1.9}
+.teme-content h4{font-size:18px;color:var(--mauve);margin:35px 0 20px;font-weight:600}
+.teme-content ul{list-style:none;padding:0;margin:0}
+.teme-content li{color:var(--light-text);font-size:16px;margin-bottom:14px;padding-left:25px;position:relative;line-height:1.8}
+.teme-content li:before{content:"▸";position:absolute;left:0;color:var(--gold);font-weight:bold}
+#anxietate .card{margin-top:40px}
+#anxietate .card h3{font-size:24px}
+#anxietate .card ul{list-style:none;padding:0;margin:0;margin-top:20px}
+#anxietate .card li{color:var(--light-text);font-size:16px;margin-bottom:14px;padding-left:25px;position:relative;line-height:1.8}
+#anxietate .card li:before{content:"▸";position:absolute;left:0;color:var(--gold);font-weight:bold}
+#sprijin .card h3{font-size:22px}
+#sesiune .card h3{font-size:22px}
+.contact{background:var(--mauve);color:white;text-align:center;padding:100px 7%}
+.contact h2{color:white;font-size:48px}
+.contact p{font-size:18px;color:rgba(255,255,255,0.9);margin:20px 0 40px}
+.contact-info{display:flex;justify-content:center;gap:50px;margin-top:40px;flex-wrap:wrap}
+.contact-item{text-align:center}
+.contact-item a{color:white;text-decoration:none;font-size:18px;font-weight:600;transition:opacity 0.3s ease;display:inline-block}
+.contact-item a:hover{opacity:0.8}
+.contact-item span{display:block;font-size:14px;color:rgba(255,255,255,0.8);margin-top:8px;letter-spacing:1px;text-transform:uppercase}
+footer{padding:30px;text-align:center;background:#3d2a34;color:rgba(255,255,255,0.8);font-size:13px;letter-spacing:0.5px}
+.disclaimer{max-width:900px;margin:60px auto 0;padding:30px;border-left:4px solid var(--gold);background:white;border-radius:4px;font-size:15px;color:var(--light-text);line-height:1.8}
+@media(max-width:1024px){nav div{gap:25px}.cards{grid-template-columns:repeat(2,1fr)}.teme-section{grid-template-columns:1fr;gap:50px}.hero{grid-template-columns:1fr;padding:60px 7%}.hero-content h1{font-size:44px}.contact-info{gap:30px}}
+@media(max-width:768px){nav{padding:18px 5%}nav div{display:none}.cards{grid-template-columns:1fr}.hero{padding:40px 5%;min-height:auto}.hero-content h1{font-size:36px}.hero-content .cta-group{flex-direction:column}.section-header h2{font-size:32px}.quote{margin:50px 5%;padding:40px}.contact{padding:60px 5%}.contact h2{font-size:32px}}
 </style>
 </head>
 <body>
-<nav><div class="logo">Adriana Ursales<br><small style="font-size:11px;letter-spacing:4px;font-style:normal">THETAHEALING®</small></div>
-<div><a href="#despre">Despre mine</a><a href="#servicii">Servicii</a><a href="#teme">Teme</a><a href="#sprijin">Pentru tine</a><a href="#sesiune">Sesiune</a><a href="#contact">Contact</a></div></nav>
+<nav>
+<div class="logo">
+Adriana Ursales
+<small>ThetaHealing®</small>
+</div>
+<div>
+<a href="#despre">Despre mine</a>
+<a href="#servicii">Servicii</a>
+<a href="#teme">Teme</a>
+<a href="#anxietate">Anxietate</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <header class="hero">
-<div><div style="letter-spacing:4px;text-transform:uppercase">Transformare · Claritate · Bine cu tine</div>
-<h1>Adriana Ursales</h1><h2>THETAHEALING®</h2>
-<p><b>Relaxare · Echilibru · Reconectare</b></p>
+<div class="hero-content">
+<div class="subtitle">Transformare · Claritate · Bine cu tine</div>
+<h1>Adriana Ursales</h1>
 <p>Un spațiu dedicat ție, în care să încetinești ritmul, să te relaxezi și să te reconectezi cu tine însăți.</p>
-<a class="btn" href="#contact">Programează o sesiune →</a></div>
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAA[...]
+<p style="color:var(--text);font-size:16px">Prin ședințele de ThetaHealing®, îți ofer un spațiu de relaxare, introspecție și reconectare, în care putem explora convingeri, emoții și tipare care îți pot influența viața de zi cu zi.</p>
+<div class="cta-group">
+<a class="btn" href="#contact">Programează o sesiune</a>
+<a class="btn btn-secondary" href="#despre">Află mai mult</a>
+</div>
+</div>
+<img src="https://images.unsplash.com/photo-1544367567-0d0fcf0b94a8?w=600&h=600&fit=crop" alt="Adriana Ursales - ThetaHealing">
 </header>
-<section id="despre"><div class="center"><div style="letter-spacing:4px">DESPRE MINE</div><h3>Un pas spre tine</h3></div>
-<p style="max-width:850px;margin:auto;font-size:19px;text-align:center">Sunt Adriana Ursales și îmi doresc să creez un spațiu cald, sigur și liniștit în care să îți oferi timp pentru tine. P[...]
-<section id="servicii"><div class="center"><div style="letter-spacing:4px">SERVICII</div><h3>Ce îți pot oferi</h3></div>
-<div class="cards"><div class="card"><h2>Sesiuni individuale</h2><p>Un spațiu personal pentru claritate, relaxare și explorare interioară.</p></div>
-<div class="card"><h2>Lucru cu intenția ta</h2><p>O sesiune construită în jurul obiectivelor și întrebărilor tale.</p></div>
-<div class="card"><h2>Dezvoltare personală</h2><p>Un proces de autocunoaștere și reconectare cu ceea ce este important pentru tine.</p></div></div></section>
-<div class="quote">„Visurile nu se îndeplinesc peste noapte, ci pas cu pas."</div>
-<section class="teme-section" id="teme">
+
+<section id="despre">
+<div class="section-header">
+<div class="section-label">Despre mine</div>
+<h2>Un pas spre tine</h2>
+</div>
+<p style="max-width:800px;margin:40px auto;text-align:center;font-size:18px;color:var(--light-text);line-height:1.9">
+Sunt Adriana Ursales și îmi doresc să creez un spațiu cald, sigur și liniștit în care să îți ofer timp pentru tine. 
+Cred că fiecare persoană merită să se asculte, să se înțeleagă și să se acorde importanță propriilor nevoi și dorințe.
+</p>
+<p style="max-width:800px;margin:20px auto;text-align:center;font-size:18px;color:var(--light-text);line-height:1.9">
+Prin practicile de ThetaHealing®, mă dedic să-ți ofer un spațiu de explorare personală, în care poți lucra cu 
+convingeri, emoții și tipare care îți influențează viața cotidiană.
+</p>
+</section>
+
+<section id="servicii" class="alt">
+<div class="section-header">
+<div class="section-label">Servicii</div>
+<h2>Ce îți pot oferi</h2>
+</div>
+<div class="cards">
+<div class="card">
+<h3>Sesiuni individuale</h3>
+<p>Un spațiu personal pentru claritate, relaxare și explorare interioară. O sesiune construită special pentru nevoile tale.</p>
+</div>
+<div class="card">
+<h3>Lucru cu intenția ta</h3>
+<p>O ședință ce se concentrează pe obiectivele și întrebările tale specifice. Explorare direcționată spre ceea ce este important pentru tine.</p>
+</div>
+<div class="card">
+<h3>Dezvoltare personală</h3>
+<p>Un proces de autocunoaștere și reconectare cu ceea ce este cu adevărat important pentru tine. Sprijin în creșterea personală.</p>
+</div>
+</div>
+</section>
+
+<div class="quote">
+<p>"Visurile nu se îndeplinesc peste noapte, ci pas cu pas, cu atenție și blândețe față de sine."</p>
+</div>
+
+<section id="teme">
+<div class="section-header">
+<div class="section-label">Explorare interioară</div>
+<h2>Un moment pentru tine</h2>
+</div>
+<div class="teme-section">
 <div class="teme-image">
-<img src="images/teme-si-convingeri.jpg" alt="Teme explorate în cadrul ședințelor de ThetaHealing">
+<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600&fit=crop" alt="Teme și convingeri explore în ședințe">
 </div>
 <div class="teme-content">
-<div style="letter-spacing:4px">EXPLORARE INTERIOARĂ</div>
-<h3>Un moment pentru tine</h3>
-<p>Un spațiu în care să te reconectezi cu tine.</p>
-<p>Uneori, avem nevoie să ne oprim, să respirăm și să privim cu mai multă blândețe către noi înșine.</p>
-<p>Prin ședințele de ThetaHealing®, îți ofer un spațiu de relaxare, introspecție și reconectare, în care putem explora împreună convingeri, emoții și tipare care îți pot influența viața de zi cu zi.</p>
-<h2 style="color:var(--mauve);font-size:24px;margin:25px 0 15px">✨ Ce poți descoperi în acest proces?</h2>
+<p>Un spațiu în care să te reconectezi cu tine și să explorezi ceea ce se întâmplă în adâncul tău.</p>
+<p>Uneori, avem nevoie să ne oprim, să respirăm și să privim cu mai multă blândețe către noi înșine. Prin ședințele de ThetaHealing®, îți ofer un spațiu de relaxare, introspecție și reconectare, în care putem explora împreună convingeri, emoții și tipare care îți pot influența viața de zi cu zi.</p>
+<h4>✨ Ce poți descoperi în acest proces?</h4>
 <ul>
-<li>Convingeri și tipare care te limitează;</li>
-<li>Emoții pe care simți că le porți de mult timp;</li>
-<li>Blocaje personale pe care vrei să le înțelegi mai bine;</li>
-<li>Noi perspective asupra relației cu tine și cu cei din jur;</li>
-<li>Mai multă claritate și conștientizare.</li>
+<li>Convingeri și tipare care te limitează</li>
+<li>Emoții pe care simți că le porți de mult timp</li>
+<li>Blocaje personale pe care vrei să le înțelegi mai bine</li>
+<li>Noi perspective asupra relației cu tine și cu cei din jur</li>
+<li>Mai multă claritate și conștientizare</li>
 </ul>
-<p><b>Oprește-te puțin. Ascultă-te. Alege-te pe tine.</b></p>
+<p style="margin-top:30px;font-weight:600;color:var(--mauve)">Oprește-te puțin. Ascultă-te. Alege-te pe tine.</p>
 <p>Dacă simți că este momentul să te alegi pe tine, să te asculți și să privești în interior cu mai multă blândețe, te invit să facem împreună primul pas.</p>
 </div>
+</div>
 </section>
-<section id="anxietate">
-<div class="center"><div style="letter-spacing:4px">PENTRU TINE</div>
-<h3>🌿 Anxietate și perioade dificile</h3></div>
-<p style="max-width:900px;margin:0 auto 30px;text-align:center;font-size:18px">
+
+<section id="anxietate" class="alt">
+<div class="section-header">
+<div class="section-label">Pentru tine</div>
+<h2>🌿 Anxietate și perioade dificile</h2>
+</div>
+<p style="max-width:900px;margin:40px auto;text-align:center;font-size:17px;color:var(--light-text);line-height:1.9">
 Uneori, grijile, fricile, stresul sau perioadele emoționale dificile pot deveni copleșitoare. Poate simți că ai nevoie să te oprești puțin, să te asculți și să înțelegi mai bine ceea ce se întâmplă în interiorul tău.
 </p>
-<p style="max-width:900px;margin:0 auto 30px;text-align:center;font-size:18px">
-În cadrul unei ședințe de ThetaHealing®, putem explora, din perspectiva dezvoltării personale și a lucrului interior, anumite convingeri, emoții și tipare pe care alegi să le privești cu mai multă conștientizare și blândețe.
+<p style="max-width:900px;margin:20px auto;text-align:center;font-size:17px;color:var(--light-text);line-height:1.9">
+În cadrul unei ședințe de ThetaHealing®, putem explora anumite convingeri, emoții și tipare pe care alegi să le privești cu mai multă conștientizare și blândețe.
 </p>
 <div class="card">
-<h2>✨ Poate fi un spațiu pentru:</h2>
+<h3>✨ Poate fi un spațiu pentru:</h3>
 <ul>
-<li>A-ți asculta emoțiile;</li>
-<li>A explora anumite frici și îngrijorări;</li>
-<li>A identifica tipare și convingeri personale;</li>
-<li>A cultiva mai multă conștientizare și compasiune față de tine;</li>
-<li>A-ți acorda timp și spațiu pentru tine.</li>
+<li>A-ți asculta emoțiile în profunzime</li>
+<li>A explora anumite frici și îngrijorări</li>
+<li>A identifica tipare și convingeri personale</li>
+<li>A cultiva mai multă conștientizare și compasiune față de tine</li>
+<li>A-ți acorda timp și spațiu pentru tine</li>
 </ul>
 </div>
 </section>
-<section id="sprijin"><div class="center"><div style="letter-spacing:4px">PENTRU TINE</div>
-<h3>Și în perioadele mai dificile</h3></div>
-<p style="max-width:900px;margin:0 auto 30px;text-align:center;font-size:18px">
-Uneori trecem prin perioade de tristețe, stres, blocaje emoționale sau nevoia de a ne regăsi echilibrul.
-În cadrul sesiunilor mele ofer un spațiu de ascultare, relaxare și explorare personală, în care poți lucra cu
-intențiile și obiectivele tale.
+
+<section id="sprijin">
+<div class="section-header">
+<div class="section-label">Suport</div>
+<h2>Și în perioadele mai dificile</h2>
+</div>
+<p style="max-width:900px;margin:40px auto;text-align:center;font-size:17px;color:var(--light-text);line-height:1.9">
+Uneori trecem prin perioade de tristețe, stres, blocaje emoționale sau nevoia de a ne regăsi echilibrul. În cadrul sesiunilor mele ofer un spațiu de ascultare, relaxare și explorare personală, în care poți lucra cu intențiile și obiectivele tale.
 </p>
 <div class="cards">
-<div class="card"><h2>Stare emoțională</h2><p>Poți veni atunci când îți dorești să îți acorzi timp pentru tine, să îți explorezi emoțiile și să găsești mai multă claritate.</p></div>
-<div class="card"><h2>Stres și perioade dificile</h2><p>Un spațiu calm pentru reflecție, relaxare și reconectare cu propriile resurse.</p></div>
-<div class="card"><h2>Susținere pentru tine</h2><p>Fiecare sesiune pornește de la ceea ce îți dorești să explorezi și de la ritmul tău.</p></div>
+<div class="card">
+<h3>Stare emoțională</h3>
+<p>Poți veni atunci când îți dorești să îți acorzi timp pentru tine, să explorezi emoțiile și să găsești mai multă claritate asupra a ceea ce simți.</p>
 </div>
-<div style="max-width:900px;margin:35px auto 0;padding:22px;border-left:4px solid #b8864b;background:#fffaf6">
-<strong>Important:</strong> Sesiunile de ThetaHealing® oferite prin acest site sunt prezentate ca practică de relaxare și dezvoltare personală.
+<div class="card">
+<h3>Stres și perioade dificile</h3>
+<p>Un spațiu calm pentru reflecție, relaxare și reconectare cu propriile resurse interne și cu capacitatea ta de resilientă.</p>
+</div>
+<div class="card">
+<h3>Susținere personală</h3>
+<p>Fiecare sesiune pornește de la ceea ce îți dorești să explorezi și de la propriul tău ritm. Nu există grăbă, doar sprijin.</p>
+</div>
+</div>
+<div class="disclaimer">
+<strong>Important:</strong> Sesiunile de ThetaHealing® oferite prin acest site sunt prezentate ca practică de relaxare și dezvoltare personală. Nu substituie consultațiile medicale sau psihologice profesionale. Dacă traversezi o perioadă dificilă, te recomand să consulți un specialist.
 </div>
 </section>
-<section id="sesiune"><div class="center"><div style="letter-spacing:4px">CUM DECURGE</div><h3>O sesiune, pas cu pas</h3></div>
-<div class="cards"><div class="card"><h2>1. Discuție</h2><p>Îmi spui ce simți și ce îți dorești să explorezi.</p></div><div class="card"><h2>2. Sesiunea</h2><p>Lucrăm într-un cadru liniștit, cu atenție și blândețe.</p></div><div class="card"><h2>3. Integrare</h2><p>Reflectăm asupra experienței și asupra următorilor pași.</p></div></div></section>
-<section id="contact" class="contact"><h3>Hai să facem primul pas</h3><p>Alba Iulia · Sesiuni în persoană sau online, la cerere</p><a class="btn" style="background:#fff;color:#6f3b57" href="mailto:adriana@example.com">Trimite-mi un mesaj</a><br><br><a href="tel:+40768368992" style="color:#fff;text-decoration:none;display:inline-block;margin-top:15px">📞 +40 768 368 992</a></section>
-<footer>Adriana Ursales · ThetaHealing® · Relaxare · Echilibru · Reconectare · Alba Iulia</footer>
+
+<section id="sesiune" class="alt">
+<div class="section-header">
+<div class="section-label">Procesul</div>
+<h2>O ședință, pas cu pas</h2>
+</div>
+<div class="cards">
+<div class="card">
+<h3>1. Discuție inițială</h3>
+<p>Îmi spui ce simți, ce dorești să explorezi și ce așteptări ai de la ședință. Creez un context cald și de încredere.</p>
+</div>
+<div class="card">
+<h3>2. Sesiunea</h3>
+<p>Lucrăm într-un cadru liniștit, cu atenție și blândețe. Te ghidez printr-un proces de explorare și relaxare interioară.</p>
+</div>
+<div class="card">
+<h3>3. Integrare și reflecție</h3>
+<p>La final, reflectăm asupra experienței tale și asupra modului în care poți integra descoperirile în viața cotidiană.</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Hai să facem primul pas</h2>
+<p>Te aștept cu plăcere pentru o ședință în persoană sau online</p>
+<div class="contact-info">
+<div class="contact-item">
+<a href="tel:+40768368992">📞 +40 768 368 992</a>
+<span>Apel sau WhatsApp</span>
+</div>
+<div class="contact-item">
+<a href="mailto:adriana@example.com">✉ Trimite-mi un mesaj</a>
+<span>E-mail</span>
+</div>
+<div class="contact-item">
+<span style="font-size:16px;font-weight:600">Alba Iulia</span>
+<span>Ședințe în persoană sau online</span>
+</div>
+</div>
+</section>
+
+<footer>
+Adriana Ursales · ThetaHealing® · Relaxare · Echilibru · Reconectare · Alba Iulia · © 2026
+</footer>
+
 </body>
 </html>
