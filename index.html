@@ -45,10 +45,36 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .contact-item a { color: #c9ada7; text-decoration: none; font-weight: 500; display: inline-block; margin: 5px; }
 .contact-item a:hover { text-decoration: underline; }
 .contact-buttons { margin-top: 30px; text-align: center; }
+.booking-section { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 40px; border-radius: 8px; margin: 40px 0; }
+.booking-section h2 { color: white; border-bottom: 3px solid rgba(255,255,255,0.3); }
+.booking-container { margin-top: 30px; }
+.booking-info { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
+.booking-info p { font-size: 1.1em; margin: 5px 0; }
+.price { font-size: 1.8em; font-weight: 600; color: #ffd700; }
+.duration { font-size: 1.1em; opacity: 0.9; }
+.calendar-wrapper { background: white; color: #333; padding: 30px; border-radius: 8px; margin-top: 20px; }
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.calendar-header button { background: #8b6f94; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 600; }
+.calendar-header button:hover { background: #6b5f7a; }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 20px; }
+.day-name { text-align: center; font-weight: 600; color: #8b6f94; padding: 10px; }
+.date-btn { padding: 12px; text-align: center; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; background: #f9f7f4; transition: all 0.3s; font-weight: 500; }
+.date-btn:hover { border-color: #c9ada7; background: #faf8f6; }
+.date-btn.active { background: #8b6f94; color: white; border-color: #8b6f94; }
+.date-btn.disabled { opacity: 0.5; cursor: not-allowed; background: #eee; }
+.time-selection { margin-top: 20px; }
+.time-label { font-weight: 600; color: #8b6f94; margin-bottom: 10px; display: block; }
+.time-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px; margin-bottom: 20px; }
+.time-btn { padding: 10px; text-align: center; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; background: #f9f7f4; transition: all 0.3s; font-weight: 500; }
+.time-btn:hover { border-color: #c9ada7; background: #faf8f6; }
+.time-btn.active { background: #8b6f94; color: white; border-color: #8b6f94; }
+.booking-btn { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; border: none; padding: 15px 40px; font-size: 1.1em; border-radius: 5px; cursor: pointer; font-weight: 600; width: 100%; margin-top: 20px; transition: transform 0.3s; }
+.booking-btn:hover { transform: translateY(-2px); }
+.booking-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 footer { background-color: #8b6f94; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
 footer p { margin: 5px 0; }
 .highlight { color: #c9ada7; font-weight: 600; }
-@media (max-width: 768px) { header h1 { font-size: 1.8em; } nav a { margin: 0 10px; font-size: .9em; } section { padding: 20px; margin: 20px 0; } .intro { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { header h1 { font-size: 1.8em; } nav a { margin: 0 10px; font-size: .9em; } section { padding: 20px; margin: 20px 0; } .intro { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } .calendar-grid { grid-template-columns: repeat(7, 1fr); gap: 5px; } .time-grid { grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); } }
 </style>
 </head>
 <body>
@@ -61,6 +87,7 @@ footer p { margin: 5px 0; }
 <nav>
 <a href="#intro">Despre</a>
 <a href="#servicii">Servicii</a>
+<a href="#booking">Rezervă</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -85,18 +112,50 @@ footer p { margin: 5px 0; }
 <div class="service-card">
 <h3>🌟 Sesiuni individuale ThetaHealing</h3>
 <p>Sesiuni personalizate pentru a lucra asupra anumitor probleme: anxietate, depresie, blocaje emoționale, relații, carieră sau claritate de viață.</p>
+<p><strong>1-1 Individualizată • 50 min • 150 RON</strong></p>
 </div>
 <div class="service-card">
 <h3>💫 Curățare emoțională</h3>
 <p>Eliberare de emoții negative, frică și traumă. Transformarea credințelor limitatoare în gânduri constructive.</p>
+<p><strong>1-1 Individualizată • 50 min • 150 RON</strong></p>
 </div>
 <div class="service-card">
 <h3>🧘 Vindecare energetică</h3>
 <p>Reechilibrare a energiei tale, reconectare cu sursa internă de putere și cu scopul tău de viață.</p>
+<p><strong>1-1 Individualizată • 50 min • 150 RON</strong></p>
 </div>
 <div class="service-card">
 <h3>✨ Dezvoltare personală</h3>
 <p>Te ajut să găsești puterea interioară și dezvoltare personală pentru a atinge obiectivele și aspirațiile tale.</p>
+<p><strong>1-1 Individualizată • 50 min • 150 RON</strong></p>
+</div>
+</div>
+</section>
+
+<section id="booking" class="booking-section">
+<h2>📅 Rezervă-ți Sesiunea</h2>
+<div class="booking-container">
+<div class="booking-info">
+<p class="price">150 RON</p>
+<p class="duration">Sesiune 1-1 Individualizată • 50 minute</p>
+<p style="font-size: 0.95em; opacity: 0.9;">Disponibil: Luni - Duminică, 08:00 - 20:00</p>
+</div>
+
+<div class="calendar-wrapper">
+<div class="calendar-header">
+<button id="prevMonth">← Luna anterioara</button>
+<span id="monthYear" style="font-weight: 600; color: #8b6f94;"></span>
+<button id="nextMonth">Luna viitoare →</button>
+</div>
+
+<div class="calendar-grid" id="calendarGrid"></div>
+
+<div class="time-selection" id="timeSelection" style="display:none;">
+<label class="time-label">Alege ora (50 min):</label>
+<div class="time-grid" id="timeGrid"></div>
+</div>
+
+<button class="booking-btn" id="bookingBtn" onclick="bookWhatsApp()" disabled>Rezervă pe WhatsApp</button>
 </div>
 </div>
 </section>
@@ -137,6 +196,124 @@ footer p { margin: 5px 0; }
 <p>&copy; 2026 Adriana Ursales - ThetaHealing Alba Iulia. Toate drepturile rezervate.</p>
 <p><em>Terapiile energetice sunt complementare și nu înlocuiesc consultațiile medicale.</em></p>
 </footer>
+
+<script>
+let selectedDate = null;
+let selectedTime = null;
+let currentMonth = new Date();
+
+const times = ['08:00', '08:50', '09:40', '10:30', '11:20', '12:10', '13:00', '13:50', '14:40', '15:30', '16:20', '17:10', '18:00', '18:50', '19:40'];
+
+function getDaysInMonth(date) {
+  return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+}
+
+function getFirstDayOfMonth(date) {
+  return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+}
+
+function renderCalendar() {
+  const grid = document.getElementById('calendarGrid');
+  grid.innerHTML = '';
+  
+  const dayNames = ['Dum', 'Lun', 'Mar', 'Mié', 'Joi', 'Vin', 'Sâm'];
+  dayNames.forEach(day => {
+    const dayEl = document.createElement('div');
+    dayEl.className = 'day-name';
+    dayEl.textContent = day;
+    grid.appendChild(dayEl);
+  });
+  
+  const firstDay = getFirstDayOfMonth(currentMonth);
+  const daysInMonth = getDaysInMonth(currentMonth);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  for (let i = 0; i < firstDay; i++) {
+    const emptyEl = document.createElement('div');
+    grid.appendChild(emptyEl);
+  }
+  
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateBtn = document.createElement('button');
+    dateBtn.className = 'date-btn';
+    dateBtn.textContent = day;
+    
+    const currentDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+    currentDate.setHours(0, 0, 0, 0);
+    
+    if (currentDate < today) {
+      dateBtn.disabled = true;
+      dateBtn.className += ' disabled';
+    } else {
+      dateBtn.onclick = () => selectDate(day, dateBtn);
+    }
+    
+    grid.appendChild(dateBtn);
+  }
+  
+  const monthYear = document.getElementById('monthYear');
+  monthYear.textContent = currentMonth.toLocaleDateString('ro-RO', { month: 'long', year: 'numeric' });
+}
+
+function selectDate(day, element) {
+  document.querySelectorAll('.date-btn').forEach(btn => btn.classList.remove('active'));
+  element.classList.add('active');
+  
+  selectedDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+  selectedTime = null;
+  
+  renderTimeGrid();
+  document.getElementById('timeSelection').style.display = 'block';
+  document.getElementById('bookingBtn').disabled = true;
+}
+
+function renderTimeGrid() {
+  const timeGrid = document.getElementById('timeGrid');
+  timeGrid.innerHTML = '';
+  
+  times.forEach(time => {
+    const timeBtn = document.createElement('button');
+    timeBtn.className = 'time-btn';
+    timeBtn.textContent = time;
+    timeBtn.onclick = () => selectTime(time, timeBtn);
+    timeGrid.appendChild(timeBtn);
+  });
+}
+
+function selectTime(time, element) {
+  document.querySelectorAll('.time-btn').forEach(btn => btn.classList.remove('active'));
+  element.classList.add('active');
+  
+  selectedTime = time;
+  document.getElementById('bookingBtn').disabled = false;
+}
+
+function bookWhatsApp() {
+  if (!selectedDate || !selectedTime) {
+    alert('Alege data și ora!');
+    return;
+  }
+  
+  const dateStr = selectedDate.toLocaleDateString('ro-RO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  const message = `Bună! Aș vrea să rezerv o sesiune de Terapie Emoțională pentru ${dateStr} la ora ${selectedTime}. Sesiune 1-1 Individualizată - 50 min - 150 RON.`;
+  const encoded = encodeURIComponent(message);
+  
+  window.open(`https://wa.me/40768368992?text=${encoded}`, '_blank');
+}
+
+document.getElementById('prevMonth').onclick = () => {
+  currentMonth.setMonth(currentMonth.getMonth() - 1);
+  renderCalendar();
+};
+
+document.getElementById('nextMonth').onclick = () => {
+  currentMonth.setMonth(currentMonth.getMonth() + 1);
+  renderCalendar();
+};
+
+renderCalendar();
+</script>
 
 </body>
 </html>
