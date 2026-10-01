@@ -38,7 +38,7 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,.1); }
 .service-card h3 { color: #8b6f94; margin-bottom: 10px; font-size: 1.3em; }
 .service-card p { color: #666; line-height: 1.7; }
-.cta-button { display: inline-block; background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; border: none; font-size: 1em; }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(139, 111, 148, 0.4); }
 .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
 .contact-item { padding: 15px; background-color: #faf8f6; border-radius: 5px; text-align: center; }
@@ -72,13 +72,28 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .time-btn:hover { border-color: #c9ada7; background: #faf8f6; }
 .time-btn.active { background: #8b6f94; color: white; border-color: #8b6f94; }
 .time-btn.disabled { opacity: 0.5; cursor: not-allowed; background: #eee; color: #999; }
-.booking-btn { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; border: none; padding: 15px 40px; font-size: 1.1em; border-radius: 5px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
-.booking-btn:hover { transform: translateY(-2px); }
+.booking-buttons-container { margin-top: 30px; }
+.booking-buttons-header { text-align: center; font-size: 0.95em; opacity: 0.95; margin-bottom: 15px; font-weight: 500; }
+.booking-buttons-group { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
+.booking-btn { color: white; border: none; padding: 15px 30px; font-size: 1em; border-radius: 5px; cursor: pointer; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; width: 100%; }
+.booking-btn:hover:not(:disabled) { transform: translateY(-2px); }
 .booking-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.card-button { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); }
+.card-button:hover:not(:disabled) { box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4); }
+.whatsapp-button { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); }
+.whatsapp-button:hover:not(:disabled) { box-shadow: 0 5px 15px rgba(139, 111, 148, 0.4); }
 footer { background-color: #8b6f94; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
 footer p { margin: 5px 0; }
 .highlight { color: #c9ada7; font-weight: 600; }
-@media (max-width: 768px) { header h1 { font-size: 1.8em; } nav a { margin: 0 10px; font-size: .9em; } section { padding: 20px; margin: 20px 0; } .intro { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { 
+  header h1 { font-size: 1.8em; } 
+  nav a { margin: 0 10px; font-size: .9em; } 
+  section { padding: 20px; margin: 20px 0; } 
+  .intro { flex-direction: column; } 
+  .services-grid { grid-template-columns: 1fr; } 
+  .booking-buttons-group { grid-template-columns: 1fr; } 
+  .booking-btn { padding: 12px 20px; font-size: 0.95em; }
+}
 </style>
 </head>
 <body>
@@ -108,7 +123,7 @@ footer p { margin: 5px 0; }
 <img src="Imagee.jpeg" alt="Adriana Ursales - ThetaHealing Practitioner">
 <div class="intro-text">
 <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării personale.</p>
-<p>ThetaHealing este o tehnică meditativă și de vindecare care funcționează prin accesarea stării theta a creierului. Aceasta permite identificarea și transformarea limitărilor inconștiente, eliberând potențialul tău plin.</p>
+<p>ThetaHealing este o tehnică meditativă și de vindecare care funcționează prin accesarea stării theta a creierului. Aceasta permite identificarea și transformarea limitărilor inconștiente care te împiedică să trăiești o viață plină cu purpose și bucurie.</p>
 <p>Cu experiență și empatie, te voi ghida în călătoria către <span class="highlight">claritate, pace emoțională și reconectarea cu potențialul tău interior</span>.</p>
 <p><strong>Locație:</strong> Alba Iulia<br><strong>Sesiuni:</strong> Online și în persoană</p>
 </div>
@@ -164,7 +179,12 @@ footer p { margin: 5px 0; }
 <div class="time-grid" id="timeGrid"></div>
 </div>
 
-<button class="booking-btn" id="bookingBtn" onclick="bookWhatsApp()" disabled>Rezervă pe WhatsApp</button>
+<div class="booking-buttons-container">
+<div class="booking-buttons-header">Alege metoda de rezervare:</div>
+<div class="booking-buttons-group">
+<button class="booking-btn card-button" id="cardPaymentBtn" onclick="alert('Linkul de plată cu cardul va fi adăugat aici. Contactează Adriana pentru detalii!')">💳 Plătește cu cardul<br><span style="font-size: 0.9em;">150 RON</span></button>
+<button class="booking-btn whatsapp-button" id="bookingBtn" onclick="bookWhatsApp()" disabled>📲 Rezervă pe WhatsApp<br><span style="font-size: 0.9em;">Alege mai jos</span></button>
+</div>
 </div>
 </div>
 </section>
