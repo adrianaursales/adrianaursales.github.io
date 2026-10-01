@@ -24,6 +24,8 @@ header p { font-size: 1.2em; opacity: .95; font-style: italic; margin: 0; }
 nav { background-color: #fff; padding: 15px 20px; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,.1); z-index: 100; text-align: center; }
 nav a { margin: 0 20px; text-decoration: none; color: #8b6f94; font-weight: 500; transition: color 0.3s; }
 nav a:hover { color: #c9ada7; }
+.unavailable-banner { background-color: #d9534f; color: white; padding: 20px; text-align: center; font-weight: 600; font-size: 1.1em; display: none; z-index: 101; position: sticky; top: 0; }
+.unavailable-banner.active { display: block; }
 .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
 section { margin: 40px 0; padding: 40px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
 section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom: 3px solid #c9ada7; padding-bottom: 10px; }
@@ -36,7 +38,7 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,.1); }
 .service-card h3 { color: #8b6f94; margin-bottom: 10px; font-size: 1.3em; }
 .service-card p { color: #666; line-height: 1.7; }
-.cta-button { display: inline-block; background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: transform 0.3s, box-shadow 0.3s; }
+.cta-button { display: inline-block; background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: 600; transition: all 0.3s; }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(139, 111, 148, 0.4); }
 .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
 .contact-item { padding: 15px; background-color: #faf8f6; border-radius: 5px; text-align: center; }
@@ -47,6 +49,7 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .contact-buttons { margin-top: 30px; text-align: center; }
 .booking-section { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; padding: 40px; border-radius: 8px; margin: 40px 0; }
 .booking-section h2 { color: white; border-bottom: 3px solid rgba(255,255,255,0.3); }
+.booking-section.unavailable { opacity: 0.6; pointer-events: none; }
 .booking-container { margin-top: 30px; }
 .booking-info { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
 .booking-info p { font-size: 1.1em; margin: 5px 0; }
@@ -68,16 +71,22 @@ section h2 { color: #8b6f94; font-size: 2em; margin-bottom: 20px; border-bottom:
 .time-btn { padding: 10px; text-align: center; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; background: #f9f7f4; transition: all 0.3s; font-weight: 500; }
 .time-btn:hover { border-color: #c9ada7; background: #faf8f6; }
 .time-btn.active { background: #8b6f94; color: white; border-color: #8b6f94; }
-.booking-btn { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; border: none; padding: 15px 40px; font-size: 1.1em; border-radius: 5px; cursor: pointer; font-weight: 600; width: 100%; margin-top: 20px; transition: transform 0.3s; }
+.time-btn.disabled { opacity: 0.5; cursor: not-allowed; background: #eee; color: #999; }
+.booking-btn { background: linear-gradient(135deg, #8b6f94 0%, #c9ada7 100%); color: white; border: none; padding: 15px 40px; font-size: 1.1em; border-radius: 5px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
 .booking-btn:hover { transform: translateY(-2px); }
 .booking-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 footer { background-color: #8b6f94; color: white; text-align: center; padding: 30px 20px; margin-top: 60px; }
 footer p { margin: 5px 0; }
 .highlight { color: #c9ada7; font-weight: 600; }
-@media (max-width: 768px) { header h1 { font-size: 1.8em; } nav a { margin: 0 10px; font-size: .9em; } section { padding: 20px; margin: 20px 0; } .intro { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } .calendar-grid { grid-template-columns: repeat(7, 1fr); gap: 5px; } .time-grid { grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); } }
+@media (max-width: 768px) { header h1 { font-size: 1.8em; } nav a { margin: 0 10px; font-size: .9em; } section { padding: 20px; margin: 20px 0; } .intro { flex-direction: column; } .services-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+
+<div class="unavailable-banner" id="unavailableBanner">
+  ⏰ Indisponibil - Sunt ocupată în intervalul 08:00-12:00
+</div>
+
 <header>
 <h1>Adriana Ursales</h1>
 <p>Terapii ThetaHealing • Alba Iulia</p>
@@ -99,7 +108,7 @@ footer p { margin: 5px 0; }
 <img src="Imagee.jpeg" alt="Adriana Ursales - ThetaHealing Practitioner">
 <div class="intro-text">
 <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării personale.</p>
-<p>ThetaHealing este o tehnică meditativă și de vindecare care funcționează prin accesarea stării theta a creierului. Aceasta permite identificarea și transformarea limitărilor inconștiente și a blocajelor emoționale.</p>
+<p>ThetaHealing este o tehnică meditativă și de vindecare care funcționează prin accesarea stării theta a creierului. Aceasta permite identificarea și transformarea limitărilor inconștiente, eliberând potențialul tău plin.</p>
 <p>Cu experiență și empatie, te voi ghida în călătoria către <span class="highlight">claritate, pace emoțională și reconectarea cu potențialul tău interior</span>.</p>
 <p><strong>Locație:</strong> Alba Iulia<br><strong>Sesiuni:</strong> Online și în persoană</p>
 </div>
@@ -204,6 +213,53 @@ let currentMonth = new Date();
 
 const times = ['08:00', '08:50', '09:40', '10:30', '11:20', '12:10', '13:00', '13:50', '14:40', '15:30', '16:20', '17:10', '18:00', '18:50', '19:40'];
 
+// Date fixe ocupate (exemple). Le poți actualiza ulterior cu datele reale.
+const bookedDates = [
+  '2026-10-05',
+  '2026-10-09'
+];
+
+const bookedTimesByDate = {
+  '2026-10-05': ['08:00', '09:40', '11:20'],
+  '2026-10-09': ['12:10', '13:00', '15:30']
+};
+
+function toDateKey(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function toMinutes(time) {
+  const [hours, minutes] = time.split(':').map(Number);
+  return hours * 60 + minutes;
+}
+
+function isUnavailable() {
+  const now = new Date();
+  const hours = now.getHours();
+  return hours >= 8 && hours < 12;
+}
+
+function updateAvailabilityStatus() {
+  const banner = document.getElementById('unavailableBanner');
+  const bookingSection = document.getElementById('booking');
+  const bookingBtn = document.getElementById('bookingBtn');
+
+  if (isUnavailable()) {
+    banner.classList.add('active');
+    bookingSection.classList.add('unavailable');
+    bookingBtn.disabled = true;
+  } else {
+    banner.classList.remove('active');
+    bookingSection.classList.remove('unavailable');
+    if (selectedDate && selectedTime) {
+      bookingBtn.disabled = false;
+    }
+  }
+}
+
 function getDaysInMonth(date) {
   return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 }
@@ -215,7 +271,7 @@ function getFirstDayOfMonth(date) {
 function renderCalendar() {
   const grid = document.getElementById('calendarGrid');
   grid.innerHTML = '';
-  
+
   const dayNames = ['Dum', 'Lun', 'Mar', 'Mié', 'Joi', 'Vin', 'Sâm'];
   dayNames.forEach(day => {
     const dayEl = document.createElement('div');
@@ -223,35 +279,39 @@ function renderCalendar() {
     dayEl.textContent = day;
     grid.appendChild(dayEl);
   });
-  
+
   const firstDay = getFirstDayOfMonth(currentMonth);
   const daysInMonth = getDaysInMonth(currentMonth);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  
+
   for (let i = 0; i < firstDay; i++) {
     const emptyEl = document.createElement('div');
     grid.appendChild(emptyEl);
   }
-  
+
   for (let day = 1; day <= daysInMonth; day++) {
     const dateBtn = document.createElement('button');
     dateBtn.className = 'date-btn';
     dateBtn.textContent = day;
-    
+
     const currentDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
     currentDate.setHours(0, 0, 0, 0);
-    
-    if (currentDate < today) {
+
+    const dateKey = toDateKey(currentDate);
+    const isPast = currentDate < today;
+    const isBooked = bookedDates.includes(dateKey);
+
+    if (isPast || isBooked) {
       dateBtn.disabled = true;
       dateBtn.className += ' disabled';
     } else {
       dateBtn.onclick = () => selectDate(day, dateBtn);
     }
-    
+
     grid.appendChild(dateBtn);
   }
-  
+
   const monthYear = document.getElementById('monthYear');
   monthYear.textContent = currentMonth.toLocaleDateString('ro-RO', { month: 'long', year: 'numeric' });
 }
@@ -259,10 +319,11 @@ function renderCalendar() {
 function selectDate(day, element) {
   document.querySelectorAll('.date-btn').forEach(btn => btn.classList.remove('active'));
   element.classList.add('active');
-  
+
   selectedDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+  selectedDate.setHours(0, 0, 0, 0);
   selectedTime = null;
-  
+
   renderTimeGrid();
   document.getElementById('timeSelection').style.display = 'block';
   document.getElementById('bookingBtn').disabled = true;
@@ -271,12 +332,27 @@ function selectDate(day, element) {
 function renderTimeGrid() {
   const timeGrid = document.getElementById('timeGrid');
   timeGrid.innerHTML = '';
-  
+
+  const dateKey = toDateKey(selectedDate);
+  const now = new Date();
+  const isToday = dateKey === toDateKey(now);
+
   times.forEach(time => {
     const timeBtn = document.createElement('button');
     timeBtn.className = 'time-btn';
     timeBtn.textContent = time;
-    timeBtn.onclick = () => selectTime(time, timeBtn);
+
+    const isBookedTime = (bookedTimesByDate[dateKey] || []).includes(time);
+    const isPastTime = isToday && toMinutes(time) <= toMinutes(`${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`);
+    const isUnavailableByHour = isToday && isUnavailable();
+
+    if (isBookedTime || isPastTime || isUnavailableByHour) {
+      timeBtn.disabled = true;
+      timeBtn.className += ' disabled';
+    } else {
+      timeBtn.onclick = () => selectTime(time, timeBtn);
+    }
+
     timeGrid.appendChild(timeBtn);
   });
 }
@@ -284,9 +360,12 @@ function renderTimeGrid() {
 function selectTime(time, element) {
   document.querySelectorAll('.time-btn').forEach(btn => btn.classList.remove('active'));
   element.classList.add('active');
-  
+
   selectedTime = time;
-  document.getElementById('bookingBtn').disabled = false;
+
+  if (!isUnavailable()) {
+    document.getElementById('bookingBtn').disabled = false;
+  }
 }
 
 function bookWhatsApp() {
@@ -294,11 +373,16 @@ function bookWhatsApp() {
     alert('Alege data și ora!');
     return;
   }
-  
+
+  if (isUnavailable()) {
+    alert('Sunt ocupată în intervalul 08:00-12:00. Te rog alege altă oră!');
+    return;
+  }
+
   const dateStr = selectedDate.toLocaleDateString('ro-RO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   const message = `Bună! Aș vrea să rezerv o sesiune de Terapie Emoțională pentru ${dateStr} la ora ${selectedTime}. Sesiune 1-1 Individualizată - 50 min - 150 RON.`;
   const encoded = encodeURIComponent(message);
-  
+
   window.open(`https://wa.me/40768368992?text=${encoded}`, '_blank');
 }
 
@@ -313,6 +397,8 @@ document.getElementById('nextMonth').onclick = () => {
 };
 
 renderCalendar();
+updateAvailabilityStatus();
+setInterval(updateAvailabilityStatus, 60000);
 </script>
 
 </body>
