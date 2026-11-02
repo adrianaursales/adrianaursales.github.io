@@ -134,16 +134,6 @@
       border-radius: 20px;
     }
 
-    .price-pill {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, rgba(200,169,106,0.14), rgba(125,95,123,0.12));
-      color: var(--mauve-deep);
-      font-weight: 700;
-    }
-
     .content-box {
       background: rgba(255,255,255,0.74);
       border: 1px solid rgba(125,95,123,0.08);
@@ -183,6 +173,57 @@
     .highlight {
       color: var(--mauve);
       font-weight: 700;
+    }
+
+    .gallery-grid,
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .gallery-item,
+    .review-card {
+      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
+      border-radius: 22px;
+      border: 1px solid rgba(125,95,123,0.05);
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(58,44,57,0.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item figcaption {
+      padding: 14px 16px 18px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .review-card {
+      padding: 20px 18px;
+      position: relative;
+    }
+
+    .stars {
+      color: #d8a94d;
+      letter-spacing: 0.12em;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .review-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .review-card strong {
+      color: var(--mauve-deep);
     }
 
     .steps-grid {
@@ -390,10 +431,6 @@
         flex-direction: column;
         align-items: flex-start;
       }
-
-      .photo-card {
-        max-width: 100%;
-      }
     }
   </style>
 </head>
@@ -413,7 +450,6 @@
 
         <div class="photo-card">
           <img src="Imagee.jpeg" alt="Adriana Ursales - ThetaHealing">
-          <div class="price-pill">150 RON / sesiune</div>
         </div>
       </div>
     </header>
@@ -423,11 +459,30 @@
       <div class="rule"></div>
       <div class="intro">
         <div class="intro-text">
-          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării profunde.</p>
-          <p>ThetaHealing este o tehnică meditativă și de vindecare care permite accesarea unei stări de profunzime interioară, unde pot fi identificate și transformate credințele limitatoare.</p>
+          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării personale.</p>
+          <p>ThetaHealing este o tehnică meditativă și de vindecare care permite accesarea unei stări de profunzime interioară, unde pot fi identificate și transformate credințele limitatoare, blocajele emoționale și tiparele vechi.</p>
           <p>Cu empatie, claritate și respect pentru procesul tău unic, te acompaniez în călătoria către pace interioară, echilibru și reconectare cu sinele autentic.</p>
           <p><strong>Locație:</strong> Alba Iulia<br><strong>Sesiuni:</strong> Online și în persoană</p>
         </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2>Poze cu terapie emoțională</h2>
+      <div class="rule"></div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Meditatie și vindecare emoțională">
+          <figcaption>Claritate și calm interior</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Respirație și conectare cu sinele">
+          <figcaption>Conectare cu sinele autentic</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Terapie emoțională și eliberare">
+          <figcaption>Eliberare și echilibru</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -458,6 +513,28 @@
       <p>Îți pot sprijini procesul de vindecare într-un spațiu sigur, calm și personalizat, online sau în persoană.</p>
       <a href="#booking" class="cta">Rezervă o sesiune</a>
     </div>
+
+    <section class="content-box">
+      <h2>Recenzii</h2>
+      <div class="rule"></div>
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>„Am simțit imediat că mă ascultă cu adevărat și că am găsit un spațiu sigur pentru a mă reconecta cu mine însămi.”</p>
+          <strong>Maria</strong>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>„Procesul a fost profund, calm și clar. M-am simțit înțeleasă și m-am eliberat de o povară emoțională veche.”</p>
+          <strong>Andreea</strong>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>„Sesiunile m-au ajutat să îmi regăsesc echilibrul și să merg mai ușor înainte. Recomand cu încredere.”</p>
+          <strong>Daniel</strong>
+        </article>
+      </div>
+    </section>
 
     <section id="booking" class="booking-box">
       <h2>📅 Rezervă-ți sesiunea</h2>
