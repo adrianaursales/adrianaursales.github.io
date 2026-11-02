@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adriana Ursales | ThetaHealing - Terapie emoțională</title>
+  <title>Adriana Ursales | ThetaHealing Alba Iulia | Sesiuni de vindecare emoțională</title>
   <meta name="description" content="Sesiuni ThetaHealing în Alba Iulia și online. Claritate emoțională, vindecare profundă și reconectare cu sinele autentic.">
+  <meta property="og:title" content="Adriana Ursales | ThetaHealing Alba Iulia">
+  <meta property="og:description" content="Terapie emoțională și sesiuni ThetaHealing pentru vindecare profundă și reconectare cu sinele autentic.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://adrianaursales.github.io/Imagee.jpeg">
   <style>
     :root {
       --ivory: #f8f3f0;
@@ -189,8 +193,11 @@
 
     .gallery-grid,
     .review-grid,
+    .services-grid,
     .steps-grid,
-    .contact-grid {
+    .contact-grid,
+    .benefits-grid,
+    .faq-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
@@ -199,8 +206,11 @@
 
     .gallery-item,
     .review-card,
+    .service-card,
     .step-card,
-    .contact-card {
+    .contact-card,
+    .benefit-card,
+    .faq-item {
       background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
       border-radius: 22px;
       border: 1px solid rgba(125,95,123,0.06);
@@ -223,9 +233,25 @@
       font-weight: 600;
     }
 
-    .review-card {
+    .review-card,
+    .service-card,
+    .benefit-card,
+    .faq-item {
       padding: 20px 18px;
       position: relative;
+    }
+
+    .review-card p,
+    .service-card p,
+    .benefit-card p,
+    .faq-item p,
+    .step-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .review-card strong {
+      color: var(--mauve-deep);
     }
 
     .stars {
@@ -235,13 +261,26 @@
       margin-bottom: 10px;
     }
 
-    .review-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
+    .service-card h3,
+    .benefit-card h3,
+    .step-card h3,
+    .faq-item h3,
+    .contact-card h4 {
+      margin: 0 0 10px;
+      color: var(--mauve-deep);
     }
 
-    .review-card strong {
+    .service-tag {
+      display: inline-block;
+      background: rgba(125,95,123,0.08);
       color: var(--mauve-deep);
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .step-card {
@@ -262,13 +301,7 @@
 
     .step-card h3 {
       margin: 12px 0 8px;
-      color: var(--mauve-deep);
       font-size: 1.2rem;
-    }
-
-    .step-card p {
-      margin: 0;
-      color: var(--muted);
     }
 
     .cta-banner {
@@ -331,7 +364,7 @@
     form {
       display: grid;
       gap: 18px;
-      max-width: 520px;
+      max-width: 620px;
       margin: 0 auto;
     }
 
@@ -345,7 +378,7 @@
       color: var(--mauve-deep);
     }
 
-    input, select {
+    input, select, textarea {
       width: 100%;
       min-height: 48px;
       padding: 0 14px;
@@ -354,6 +387,12 @@
       background: #fff;
       color: var(--text);
       font: inherit;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+      padding: 12px 14px;
     }
 
     .booking-btn {
@@ -378,11 +417,6 @@
       text-align: center;
     }
 
-    .contact-card h4 {
-      margin: 0 0 8px;
-      color: var(--mauve-deep);
-    }
-
     .contact-card a {
       color: var(--muted);
       text-decoration: none;
@@ -397,6 +431,26 @@
       justify-content: center;
       gap: 12px;
       margin-top: 26px;
+    }
+
+    .faq-item details {
+      border: none;
+      background: transparent;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--mauve-deep);
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item p {
+      margin-top: 10px;
     }
 
     .whatsapp-float {
@@ -462,10 +516,51 @@
       <div class="rule"></div>
       <div class="intro">
         <div class="intro-text">
-          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării personale.</p>
-          <p>ThetaHealing este o tehnică meditativă și de vindecare care permite accesarea unei stări de profunzime interioară, unde pot fi identificate și transformate credințele limitatoare, blocajele emoționale și tiparele vechi.</p>
-          <p>Cu empatie, claritate și respect pentru procesul tău unic, te acompaniez în călătoria către pace interioară, echilibru și reconectare cu sinele autentic.</p>
+          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană dedicată <span class="highlight">ThetaHealing</span>, pentru vindecare emoțională și transformare profundă.</p>
+          <p>ThetaHealing este o tehnică meditativă și de vindecare care te ajută să accesezi stări interioare de liniște și să identifici credințele limitative care influențează viața ta.</p>
+          <p>Îți ofer un spațiu sigur, calm și personalizat, în care poți explora emoțiile, elibera tensiuni și reconecta cu autenticitatea ta.</p>
           <p><strong>Locație:</strong> Alba Iulia<br><strong>Sesiuni:</strong> Online și în persoană</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2>Servicii</h2>
+      <div class="rule"></div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-tag">Individual</div>
+          <h3>Sesiune de vindecare</h3>
+          <p>Lucru profund la nivel emoțional și energetic pentru eliberare, claritate și conexiune interioară.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-tag">Online</div>
+          <h3>Consultare online</h3>
+          <p>Accesibil din orice locație, într-un mediu sigur și confortabil, pentru sprijin continuu.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-tag">Transformare</div>
+          <h3>Reconfigurare interioară</h3>
+          <p>Te ajut să identifici blocajele, să le transformi și să reiei controlul asupra vieții tale.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h2>De ce aleg ThetaHealing?</h2>
+      <div class="rule"></div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Claritate emoțională</h3>
+          <p>Te ajut să înțelegi ce se întâmplă în tine și de ce reacționezi așa cum reacționezi.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Vindecare profundă</h3>
+          <p>Lucrezi la nivelul credințelor care te limitează și la energia care te împovărează.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Conectare cu sinele</h3>
+          <p>Începi să te simți mai prezentă, mai liniștită și mai în armonie cu propria ta autenticitate.</p>
         </div>
       </div>
     </section>
@@ -518,6 +613,31 @@
     </div>
 
     <section class="content-box">
+      <h2>Întrebări frecvente</h2>
+      <div class="rule"></div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <details open>
+            <summary>Ce este ThetaHealing?</summary>
+            <p>Este o tehnică de vindecare și autocunoaștere care ajută la accesarea unor stări profunde de conștientizare pentru a transforma credințele limitative.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Este potrivit și pentru mine?</summary>
+            <p>Da. Fie că ai nevoie de claritate emoțională, de vindecare sau de reconectare cu tine, această metodă poate fi benefică în diverse etape ale vieții.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Se poate face online?</summary>
+            <p>Da. Sesiunile online sunt disponibile și se desfășoară într-un spațiu sigur și confortabil, în funcție de nevoile tale.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
       <h2>Recenzii</h2>
       <div class="rule"></div>
       <div class="review-grid">
@@ -551,6 +671,21 @@
 
         <form id="bookingForm">
           <div class="field">
+            <label for="guestName">Numele</label>
+            <input id="guestName" type="text" placeholder="Numele tău" required>
+          </div>
+
+          <div class="field">
+            <label for="guestPhone">Telefon</label>
+            <input id="guestPhone" type="tel" placeholder="07xx xxx xxx" required>
+          </div>
+
+          <div class="field">
+            <label for="guestEmail">Email</label>
+            <input id="guestEmail" type="email" placeholder="nume@email.com">
+          </div>
+
+          <div class="field">
             <label for="bookingDate">Alege data</label>
             <input id="bookingDate" type="date" min="" required>
           </div>
@@ -577,7 +712,22 @@
             </select>
           </div>
 
-          <button id="whatsappBtn" class="booking-btn" type="button" disabled>📲 Rezervă pe WhatsApp</button>
+          <div class="field">
+            <label for="serviceType">Tipul sesiunii</label>
+            <select id="serviceType">
+              <option value="Sesiune de ThetaHealing">Sesiune de ThetaHealing</option>
+              <option value="Sesiune online">Sesiune online</option>
+              <option value="Sesiune în persoană">Sesiune în persoană</option>
+              <option value="Întâlnire inițială">Întâlnire inițială</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="guestMessage">Ce te preocupă?</label>
+            <textarea id="guestMessage" placeholder="Spune-mi puțin despre ce ai vrea să lucrezi..."></textarea>
+          </div>
+
+          <button id="whatsappBtn" class="booking-btn" type="button" disabled>📲 Trimite pe WhatsApp</button>
         </form>
       </div>
     </section>
@@ -623,6 +773,11 @@
     const bookingDate = document.getElementById('bookingDate');
     const bookingTime = document.getElementById('bookingTime');
     const whatsappBtn = document.getElementById('whatsappBtn');
+    const guestName = document.getElementById('guestName');
+    const guestPhone = document.getElementById('guestPhone');
+    const guestEmail = document.getElementById('guestEmail');
+    const serviceType = document.getElementById('serviceType');
+    const guestMessage = document.getElementById('guestMessage');
 
     const today = new Date();
     const minDate = new Date(today);
@@ -630,20 +785,28 @@
     bookingDate.min = minDate.toISOString().split('T')[0];
 
     function checkBookingState() {
-      const valid = bookingDate.value && bookingTime.value;
+      const valid = guestName.value.trim() && guestPhone.value.trim() && bookingDate.value && bookingTime.value;
       whatsappBtn.disabled = !valid;
     }
 
-    bookingDate.addEventListener('change', checkBookingState);
-    bookingTime.addEventListener('change', checkBookingState);
+    [guestName, guestPhone, bookingDate, bookingTime].forEach(field => {
+      field.addEventListener('input', checkBookingState);
+      field.addEventListener('change', checkBookingState);
+    });
 
     whatsappBtn.addEventListener('click', function () {
-      if (!bookingDate.value || !bookingTime.value) {
-        alert('Alege data și ora!');
+      if (!guestName.value.trim() || !guestPhone.value.trim() || !bookingDate.value || !bookingTime.value) {
+        alert('Te rugăm să completezi numele, telefonul, data și ora!');
         return;
       }
 
-      const message = `Bună ziua! Vreau să rezerv o sesiune de ThetaHealing la data de ${bookingDate.value} la ora ${bookingTime.value}.`;
+      const fullName = guestName.value.trim();
+      const phone = guestPhone.value.trim();
+      const emailLine = guestEmail.value.trim() ? `Email: ${guestEmail.value.trim()}\n` : '';
+      const service = serviceType.value || 'Sesiune de ThetaHealing';
+      const messageText = guestMessage.value.trim();
+
+      const message = `Bună ziua! Mă numesc ${fullName}. Vreau să rezerv o ${service} la data de ${bookingDate.value} la ora ${bookingTime.value}. Telefon: ${phone}.\n${emailLine}Mesaj: ${messageText || 'Vreau să rezerv o sesiune.'}`;
       const url = `https://wa.me/40768368992?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     });
