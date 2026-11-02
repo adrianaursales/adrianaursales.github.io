@@ -16,6 +16,11 @@
       --muted: #5f5a5c;
       --gold: #c8a96a;
       --white: #fff;
+      --shadow-soft: 0 20px 45px rgba(58, 44, 57, 0.08);
+      --shadow-strong: 0 25px 55px rgba(125, 95, 123, 0.16);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
     }
 
     * { box-sizing: border-box; }
@@ -23,50 +28,53 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #f7f2ee 0%, #faf6f4 100%);
+      background: linear-gradient(180deg, #f7f3f0 0%, #faf6f4 100%);
       color: var(--text);
       line-height: 1.7;
     }
 
+    img { max-width: 100%; display: block; }
     a { color: inherit; }
 
     .wrap {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 28px 20px 72px;
     }
 
     header {
-      background: linear-gradient(135deg, #f4eee9 0%, #f8f3f0 26%, #f3ebf0 100%);
-      border-radius: 28px;
-      padding: 36px 28px;
-      box-shadow: 0 18px 35px rgba(58,44,57,0.08);
+      background: linear-gradient(135deg, #f3ece8 0%, #f8f4f1 52%, #f5edf2 100%);
+      border-radius: var(--radius-xl);
+      padding: 34px 28px 28px;
+      box-shadow: var(--shadow-soft);
       margin-bottom: 28px;
+      overflow: hidden;
     }
 
     .hero {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      gap: 32px;
       flex-wrap: wrap;
     }
 
     .hero-copy {
-      flex: 1 1 480px;
+      flex: 1 1 540px;
     }
 
     .eyebrow {
       font-size: 0.72rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
       font-weight: 700;
       color: var(--mauve-deep);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2.4rem, 4.3vw, 4rem);
+      line-height: 1.1;
       font-weight: 300;
       margin: 0 0 12px;
       color: var(--text);
@@ -75,14 +83,15 @@
     .subtitle {
       font-size: 1.1rem;
       color: var(--muted);
-      margin: 0 0 20px;
-      max-width: 650px;
+      margin: 0 0 22px;
+      max-width: 660px;
     }
 
     .cta-row {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 8px;
     }
 
     .cta,
@@ -90,26 +99,24 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
+      min-height: 50px;
       padding: 0 24px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cta {
       background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
       color: var(--white);
-      box-shadow: 0 12px 25px rgba(125,95,123,0.22);
+      box-shadow: 0 16px 28px rgba(125, 95, 123, 0.22);
     }
 
     .secondary {
-      background: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.42);
+      border: 1px solid rgba(125,95,123,0.18);
       color: var(--mauve-deep);
-      border: 1px solid rgba(125,95,123,0.2);
     }
 
     .cta:hover, .secondary:hover, .booking-btn:hover, .whatsapp-float:hover {
@@ -117,17 +124,16 @@
     }
 
     .photo-card {
-      flex: 1 1 290px;
+      flex: 1 1 300px;
       max-width: 360px;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.76);
       border: 1px solid rgba(125,95,123,0.08);
       border-radius: 28px;
-      padding: 18px;
+      padding: 16px;
       box-shadow: 0 22px 40px rgba(58,44,57,0.08);
     }
 
     .photo-card img {
-      display: block;
       width: 100%;
       height: 360px;
       object-fit: cover;
@@ -137,9 +143,9 @@
     .content-box {
       background: rgba(255,255,255,0.74);
       border: 1px solid rgba(125,95,123,0.08);
-      border-radius: 28px;
+      border-radius: var(--radius-xl);
       padding: 30px;
-      box-shadow: 0 18px 35px rgba(58,44,57,0.08);
+      box-shadow: var(--shadow-soft);
       margin-bottom: 28px;
     }
 
@@ -155,7 +161,7 @@
       height: 3px;
       background: linear-gradient(90deg, var(--gold), var(--rose));
       border-radius: 999px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .intro {
@@ -168,6 +174,7 @@
     .intro-text {
       flex: 1 1 420px;
       color: var(--muted);
+      font-size: 1rem;
     }
 
     .highlight {
@@ -176,7 +183,9 @@
     }
 
     .gallery-grid,
-    .review-grid {
+    .review-grid,
+    .steps-grid,
+    .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
@@ -184,19 +193,23 @@
     }
 
     .gallery-item,
-    .review-card {
+    .review-card,
+    .step-card,
+    .contact-card {
       background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
       border-radius: 22px;
-      border: 1px solid rgba(125,95,123,0.05);
-      overflow: hidden;
+      border: 1px solid rgba(125,95,123,0.06);
       box-shadow: 0 12px 24px rgba(58,44,57,0.05);
+    }
+
+    .gallery-item {
+      overflow: hidden;
     }
 
     .gallery-item img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      display: block;
     }
 
     .gallery-item figcaption {
@@ -212,8 +225,8 @@
 
     .stars {
       color: #d8a94d;
-      letter-spacing: 0.12em;
-      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      font-size: 1.08rem;
       margin-bottom: 10px;
     }
 
@@ -226,17 +239,7 @@
       color: var(--mauve-deep);
     }
 
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
-    }
-
     .step-card {
-      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
-      border-radius: 22px;
-      border: 1px solid rgba(125,95,123,0.05);
       padding: 22px 20px;
       position: relative;
     }
@@ -259,18 +262,18 @@
     }
 
     .step-card p {
-      color: var(--muted);
       margin: 0;
+      color: var(--muted);
     }
 
     .cta-banner {
       background: linear-gradient(135deg, rgba(125,95,123,0.96) 0%, rgba(216,183,172,0.96) 100%);
-      border-radius: 28px;
+      border-radius: var(--radius-xl);
       color: #fff;
-      padding: 28px 22px;
+      padding: 30px 22px;
       text-align: center;
       margin-bottom: 28px;
-      box-shadow: 0 18px 35px rgba(125,95,123,0.16);
+      box-shadow: var(--shadow-strong);
     }
 
     .cta-banner h3 {
@@ -282,7 +285,7 @@
     .cta-banner p {
       margin: 0 auto 18px;
       max-width: 680px;
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     .booking-box {
@@ -291,7 +294,7 @@
       border: none;
       box-shadow: 0 18px 44px rgba(125,95,123,0.18);
       padding: 30px;
-      border-radius: 28px;
+      border-radius: var(--radius-xl);
       margin-bottom: 28px;
     }
 
@@ -304,8 +307,8 @@
 
     .booking-card {
       background: rgba(255,255,255,0.97);
-      color: var(--text);
       border-radius: 22px;
+      color: var(--text);
       padding: 24px;
     }
 
@@ -315,9 +318,9 @@
     }
 
     .booking-summary .price {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.1rem, 4vw, 3rem);
       font-weight: 700;
-      color: #e7ca7d;
+      color: #d7b15d;
     }
 
     form {
@@ -365,16 +368,7 @@
       cursor: not-allowed;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 18px;
-    }
-
     .contact-card {
-      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
-      border: 1px solid rgba(125,95,123,0.05);
-      border-radius: 20px;
       padding: 18px 16px;
       text-align: center;
     }
@@ -395,8 +389,8 @@
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
       justify-content: center;
+      gap: 12px;
       margin-top: 26px;
     }
 
@@ -423,13 +417,17 @@
       color: white;
       padding: 28px 20px;
       background: linear-gradient(135deg, var(--mauve-deep) 0%, var(--mauve) 100%);
-      border-radius: 20px 20px 0 0;
+      border-radius: 22px 22px 0 0;
     }
 
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .photo-card {
+        max-width: 100%;
       }
     }
   </style>
