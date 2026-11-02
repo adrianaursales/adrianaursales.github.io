@@ -2,167 +2,137 @@
 <html lang="ro">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Adriana Ursales — ThetaHealing Alba Iulia | Sesiuni online și în persoană</title>
-  <meta name="description" content="Sesiuni ThetaHealing în Alba Iulia și online. Claritate emoțională, vindecare profundă și reconectare cu sinele autentic.">
-  <meta name="keywords" content="terapii, ThetaHealing, terapii energetice, Alba Iulia, sesiuni online, vindecare emoțională">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="googlebot" content="index,follow">
-  <link rel="canonical" href="https://adrianaursales.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Adriana Ursales — ThetaHealing Alba Iulia | Sesiuni online și în persoană">
-  <meta property="og:description" content="Sesiuni ThetaHealing în Alba Iulia și online. Claritate emoțională, vindecare profundă și reconectare cu sinele autentic.">
-  <meta property="og:url" content="https://adrianaursales.github.io/">
-  <meta property="og:image" content="https://adrianaursales.github.io/Imagee.jpeg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adriana Ursales | ThetaHealing Alba Iulia</title>
   <style>
     :root {
-      --sand: #efe3d5;
-      --rose: #d8b7ac;
       --mauve: #7d5f7b;
       --mauve-deep: #55455d;
-      --sage: #a9b9a2;
+      --rose: #d8b7ac;
+      --sand: #efe3d5;
       --ivory: #f9f5f2;
-      --white: #ffffff;
       --text: #2d282d;
       --muted: #5f5a5c;
       --gold: #c8a96a;
-      --shadow: rgba(58, 44, 57, 0.08);
-      --success: #2a9d6f;
+      --white: #fff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #f7f2ee 0%, #faf6f4 100%);
       color: var(--text);
-      background: linear-gradient(180deg, #f7f2ee 0%, #f9f5f4 100%);
       line-height: 1.7;
     }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; }
-    p { margin-bottom: 0; }
 
-    .topbar {
-      background: linear-gradient(135deg, rgba(125,95,123,0.97), rgba(216,183,172,0.92));
-      color: white;
-      text-align: center;
-      font-size: 0.74rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 16px 20px;
-      font-weight: 700;
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
     }
 
     header {
       background: linear-gradient(135deg, #f4eee9 0%, #f8f3f0 26%, #f3ebf0 100%);
-      position: relative;
-      overflow: hidden;
-      padding: 62px 20px 44px;
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: 0 18px 35px rgba(58,44,57,0.08);
+      margin-bottom: 28px;
     }
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(200,169,106,0.18), transparent 26%),
-        radial-gradient(circle at 80% 20%, rgba(125,95,123,0.12), transparent 28%),
-        radial-gradient(circle at 60% 80%, rgba(216,183,172,0.14), transparent 24%);
-      pointer-events: none;
-    }
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+
+    .hero {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 28px;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
     }
-    .hero-copy { flex: 1 1 520px; }
+
+    .hero-copy {
+      flex: 1 1 480px;
+    }
+
     .eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      color: var(--mauve-deep);
+      letter-spacing: 0.18em;
       font-weight: 700;
-      margin-bottom: 10px;
-    }
-    h1 {
-      font-size: clamp(2.5rem, 5vw, 4.3rem);
-      line-height: 1.08;
-      color: var(--text);
-      font-weight: 300;
-      letter-spacing: 0.02em;
+      color: var(--mauve-deep);
       margin-bottom: 12px;
     }
-    .subtitle {
-      color: var(--muted);
-      font-size: 1.15rem;
-      max-width: 620px;
-      margin-bottom: 24px;
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      margin: 0 0 12px;
+      color: var(--text);
     }
-    .hero-actions {
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 20px;
+      max-width: 650px;
+    }
+
+    .cta-row {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
-    .cta-button, .ghost-button {
+
+    .cta,
+    .secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 48px;
-      padding: 0 26px;
+      padding: 0 24px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
     }
-    .cta-button {
-      background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
-      color: white;
-      box-shadow: 0 12px 25px rgba(125,95,123,0.2);
-    }
-    .ghost-button {
-      border: 1px solid rgba(125,95,123,0.18);
-      background: rgba(255,255,255,0.4);
-      color: var(--mauve-deep);
-    }
-    .cta-button:hover, .ghost-button:hover { transform: translateY(-2px); }
 
-    .hero-card {
-      flex: 1 1 320px;
+    .cta {
+      background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
+      color: var(--white);
+      box-shadow: 0 12px 25px rgba(125,95,123,0.22);
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.5);
+      color: var(--mauve-deep);
+      border: 1px solid rgba(125,95,123,0.2);
+    }
+
+    .cta:hover, .secondary:hover, .booking-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .photo-card {
+      flex: 1 1 290px;
       max-width: 360px;
-      background: rgba(255,255,255,0.78);
+      background: rgba(255,255,255,0.8);
       border: 1px solid rgba(125,95,123,0.08);
       border-radius: 28px;
+      padding: 18px;
       box-shadow: 0 22px 40px rgba(58,44,57,0.08);
-      padding: 22px 22px 18px;
-      backdrop-filter: blur(8px);
     }
-    .card-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--mauve-deep);
-      font-weight: 700;
-      margin-bottom: 10px;
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 20px;
     }
-    .hero-card h3 {
-      margin-bottom: 12px;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 400;
-      color: var(--text);
-    }
-    .hero-card p {
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .pricing-pill {
+
+    .price-pill {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 16px;
       padding: 8px 14px;
       border-radius: 999px;
       background: linear-gradient(135deg, rgba(200,169,106,0.14), rgba(125,95,123,0.12));
@@ -170,673 +140,288 @@
       font-weight: 700;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(125,95,123,0.08);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px 28px;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--mauve-deep);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--gold); }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 26px 20px 0; }
-
-    section {
+    .content-box {
       background: rgba(255,255,255,0.74);
       border: 1px solid rgba(125,95,123,0.08);
       border-radius: 28px;
-      box-shadow: 0 18px 35px var(--shadow);
-      padding: 34px 30px;
-      margin: 28px 0;
+      padding: 30px;
+      box-shadow: 0 18px 35px rgba(58,44,57,0.08);
+      margin-bottom: 28px;
     }
-    section h2 {
-      color: var(--mauve-deep);
-      font-size: clamp(1.9rem, 3vw, 2.7rem);
+
+    .content-box h2 {
+      margin: 0 0 18px;
       font-weight: 400;
-      letter-spacing: 0.01em;
-      margin-bottom: 12px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--mauve-deep);
     }
-    .section-rule {
+
+    .rule {
       width: 110px;
       height: 3px;
       background: linear-gradient(90deg, var(--gold), var(--rose));
       border-radius: 999px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .intro {
       display: flex;
       align-items: center;
+      gap: 28px;
       flex-wrap: wrap;
-      gap: 30px;
-    }
-    .intro img {
-      width: min(100%, 330px);
-      border-radius: 24px;
-      border: 4px solid rgba(255,255,255,0.7);
-      box-shadow: 0 20px 35px rgba(58,44,57,0.12);
-    }
-    .intro-text { flex: 1 1 440px; }
-    .intro-text p {
-      color: var(--muted);
-      margin-bottom: 14px;
-      font-size: 1.04rem;
-    }
-    .highlight { color: var(--mauve); font-weight: 700; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 18px;
-    }
-    .service-card {
-      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
-      border-radius: 22px;
-      border: 1px solid rgba(125,95,123,0.05);
-      padding: 24px 20px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 26px rgba(58,44,57,0.06);
-    }
-    .service-card h3 {
-      color: var(--mauve-deep);
-      margin-bottom: 10px;
-      font-size: 1.28rem;
-      font-weight: 600;
-    }
-    .service-card p {
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .service-card strong {
-      display: block;
-      margin-top: 10px;
-      color: var(--text);
-      font-size: 0.96rem;
     }
 
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 18px;
-    }
-    .benefit-item {
-      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
-      border-radius: 22px;
-      padding: 22px 20px;
-      border: 1px solid rgba(125,95,123,0.06);
-    }
-    .benefit-item .icon {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      display: inline-block;
-    }
-    .benefit-item h3 {
-      margin-bottom: 8px;
-      color: var(--mauve-deep);
-      font-size: 1.18rem;
-    }
-    .benefit-item p {
+    .intro-text {
+      flex: 1 1 420px;
       color: var(--muted);
     }
 
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 18px;
-    }
-    .step-card {
-      background: linear-gradient(180deg, #fff 0%, #f9f5f2 100%);
-      border-radius: 22px;
-      border: 1px solid rgba(125,95,123,0.06);
-      padding: 22px 20px;
-      position: relative;
-    }
-    .step-number {
-      position: absolute;
-      top: 14px;
-      right: 18px;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      color: var(--gold);
+    .highlight {
+      color: var(--mauve);
       font-weight: 700;
-      text-transform: uppercase;
-    }
-    .step-card h3 {
-      color: var(--mauve-deep);
-      margin-bottom: 8px;
-      font-size: 1.18rem;
-      margin-top: 14px;
-    }
-    .step-card p {
-      color: var(--muted);
     }
 
-    .gallery-section {
-      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(250,247,245,0.95));
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .gallery-card {
-      background: #fff;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(125,95,123,0.06);
-      box-shadow: 0 12px 25px rgba(58,44,57,0.05);
-    }
-    .gallery-card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-    .gallery-card .caption {
-      padding: 16px 16px 18px;
-      color: var(--muted);
-      font-weight: 600;
-      background: linear-gradient(180deg, #fff 0%, #f9f5f2 100%);
-    }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 18px;
-    }
-    .review-card {
-      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
-      border-radius: 22px;
-      padding: 22px 20px;
-      border: 1px solid rgba(125,95,123,0.06);
-    }
-    .review-card p {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .review-card strong {
-      color: var(--mauve-deep);
-      font-size: 0.96rem;
-    }
-
-    .faq-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .faq-item {
-      background: linear-gradient(180deg, #fff 0%, #f9f5f2 100%);
-      border: 1px solid rgba(125,95,123,0.06);
-      border-radius: 18px;
-      padding: 18px 20px;
-    }
-    .faq-item strong {
-      display: block;
-      color: var(--mauve-deep);
-      margin-bottom: 6px;
-      font-size: 1.02rem;
-    }
-    .faq-item p {
-      color: var(--muted);
-    }
-
-    .booking-section {
+    .booking-box {
       background: linear-gradient(135deg, rgba(125,95,123,0.97) 0%, rgba(216,183,172,0.96) 100%);
-      color: white;
+      color: #fff;
       border: none;
-      box-shadow: 0 18px 44px rgba(125, 95, 123, 0.18);
+      box-shadow: 0 18px 44px rgba(125,95,123,0.18);
+      padding: 30px;
+      border-radius: 28px;
+      margin-bottom: 28px;
     }
-    .booking-section h2 { color: white; }
-    .booking-info {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 18px;
-      padding: 20px 18px;
-      text-align: center;
-      margin-bottom: 18px;
+
+    .booking-box h2 {
+      color: #fff;
+      margin: 0 0 18px;
+      font-weight: 400;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
     }
-    .price {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: #ffe7af;
-      letter-spacing: 0.03em;
-    }
-    .duration {
-      margin-top: 6px;
-      opacity: 0.95;
-      font-size: 1.04rem;
-    }
-    .calendar-wrapper {
+
+    .booking-card {
       background: rgba(255,255,255,0.97);
       color: var(--text);
-      border-radius: 20px;
+      border-radius: 22px;
       padding: 24px;
-      border: 1px solid rgba(255,255,255,0.3);
     }
-    .calendar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
+
+    .booking-summary {
+      text-align: center;
       margin-bottom: 18px;
     }
-    .calendar-header button {
-      background: linear-gradient(135deg, var(--mauve) 0%, var(--mauve-deep) 100%);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 11px 18px;
+
+    .booking-summary .price {
+      font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 700;
-      cursor: pointer;
+      color: #e7ca7d;
     }
-    #monthYear {
-      color: var(--mauve-deep);
-      font-weight: 700;
-      font-size: 1.06rem;
-    }
-    .calendar-grid {
+
+    form {
       display: grid;
-      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .field {
+      display: grid;
       gap: 8px;
-      margin-bottom: 20px;
     }
-    .day-name {
-      text-align: center;
-      padding: 10px 6px;
-      color: var(--mauve-deep);
+
+    label {
       font-weight: 700;
-      font-size: 0.9rem;
+      color: var(--mauve-deep);
     }
-    .date-btn, .time-btn {
-      background: #faf8f7;
-      border: 1px solid rgba(125,95,123,0.12);
+
+    input, select {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 14px;
       border-radius: 12px;
-      padding: 12px 8px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
+      border: 1px solid rgba(125,95,123,0.18);
+      background: #fff;
+      color: var(--text);
+      font: inherit;
     }
-    .date-btn:hover, .time-btn:hover {
-      border-color: rgba(125,95,123,0.28);
-      background: white;
-    }
-    .date-btn.active, .time-btn.active {
-      background: linear-gradient(135deg, var(--mauve), var(--rose));
-      color: white;
-      border-color: transparent;
-    }
-    .date-btn.disabled, .time-btn.disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-      background: #f1efef;
-      color: #8d8b8d;
-    }
-    .time-selection { margin-top: 18px; }
-    .time-label {
-      display: inline-block;
-      margin-bottom: 10px;
-      font-weight: 700;
-      color: var(--mauve-deep);
-    }
-    .time-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-      gap: 10px;
-    }
-    .booking-buttons-container { margin-top: 24px; }
-    .booking-buttons-header {
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 14px;
-      opacity: 0.96;
-    }
-    .booking-buttons-group {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
+
     .booking-btn {
       width: 100%;
+      min-height: 54px;
       border: none;
       border-radius: 14px;
-      padding: 16px 18px;
+      background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
+      color: white;
       font-weight: 700;
       cursor: pointer;
-      color: white;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .booking-btn:hover:not(:disabled) { transform: translateY(-2px); }
-    .booking-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .whatsapp-button {
-      background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
       box-shadow: 0 12px 25px rgba(125,95,123,0.25);
     }
 
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+    .booking-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
-    .contact-item {
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+    }
+
+    .contact-card {
       background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
       border: 1px solid rgba(125,95,123,0.05);
       border-radius: 20px;
       padding: 18px 16px;
       text-align: center;
     }
-    .contact-item h4 {
+
+    .contact-card h4 {
+      margin: 0 0 8px;
       color: var(--mauve-deep);
-      margin-bottom: 8px;
-      font-size: 1.08rem;
     }
-    .contact-item p, .contact-item a {
+
+    .contact-card a {
       color: var(--muted);
       text-decoration: none;
       font-weight: 600;
     }
-    .contact-item a:hover { text-decoration: underline; }
-    .contact-buttons {
+
+    .contact-card a:hover { text-decoration: underline; }
+
+    .contact-links {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
+      justify-content: center;
       margin-top: 26px;
     }
 
     footer {
-      background: linear-gradient(135deg, var(--mauve-deep) 0%, var(--mauve) 100%);
-      color: white;
       text-align: center;
-      padding: 32px 20px;
-      margin-top: 52px;
+      color: white;
+      padding: 28px 20px;
+      background: linear-gradient(135deg, var(--mauve-deep) 0%, var(--mauve) 100%);
+      border-radius: 20px 20px 0 0;
     }
-    footer p { margin: 6px 0; }
 
     @media (max-width: 768px) {
-      section { padding: 24px 18px; }
-      .hero-copy { text-align: center; }
-      .hero-actions { justify-content: center; }
-      .hero-card { max-width: 100%; }
-      nav a { font-size: 0.96rem; }
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .photo-card {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="topbar">Wellness • Healing • Inner Balance</div>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Adriana Ursales</div>
+          <h1>Terapii ThetaHealing</h1>
+          <p class="subtitle">Sesiuni individuale pentru claritate emoțională, vindecare profundă și reconectare cu sinele autentic.</p>
+          <div class="cta-row">
+            <a href="#booking" class="cta">Rezervă acum</a>
+            <a href="#contact" class="secondary">Contact</a>
+          </div>
+        </div>
 
-  <header>
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="eyebrow">Adriana Ursales</div>
-        <h1>Terapii ThetaHealing</h1>
-        <p class="subtitle">Sesiuni individuale pentru claritate emoțională, vindecare profundă și reconectare cu sinele autentic.</p>
-        <div class="hero-actions">
-          <a href="#booking" class="cta-button">Rezervă acum</a>
-          <a href="#contact" class="ghost-button">Contact</a>
+        <div class="photo-card">
+          <img src="Imagee.jpeg" alt="Adriana Ursales - ThetaHealing">
+          <div class="price-pill">150 RON / sesiune</div>
         </div>
       </div>
+    </header>
 
-      <div class="hero-card">
-        <div class="card-label">Despre mine</div>
-        <h3>Vindecare cu calm și autenticitate</h3>
-        <p>Te sprijin să eliberezi blocajele emoționale și să redescoperi energia vieții tale, într-un spațiu sigur și liniștit.</p>
-        <span class="pricing-pill">150 RON / sesiune</span>
-      </div>
-    </div>
-  </header>
-
-  <nav>
-    <div class="nav-inner">
-      <a href="#intro">Despre</a>
-      <a href="#servicii">Servicii</a>
-      <a href="#beneficii">Beneficii</a>
-      <a href="#gallery">Galerie</a>
-      <a href="#booking">Rezervă</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <main class="container">
-    <section id="intro">
+    <section class="content-box">
       <h2>Bine ai venit!</h2>
-      <div class="section-rule"></div>
+      <div class="rule"></div>
       <div class="intro">
-        <img src="Imagee.jpeg" alt="Adriana Ursales - ThetaHealing Practicioner">
         <div class="intro-text">
-          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării personale.</p>
-          <p>ThetaHealing este o tehnică meditativă și de vindecare care permite accesarea unei stări de profunzime interioară, unde pot fi identificate și transformate credințele limitatoare și emoțiile adânc înrădăcinate.</p>
-          <p>Cu empatie, claritate și respect pentru procesul tău unic, te acompaniez în călătoria către <span class="highlight">pace interioară, echilibru și reconectare cu sinele autentic</span>.</p>
+          <p>Sunt <span class="highlight">Adriana Ursales</span>, practiciană certificată în <span class="highlight">ThetaHealing</span>, dedicată vindecării emoționale și transformării profunde.</p>
+          <p>ThetaHealing este o tehnică meditativă și de vindecare care permite accesarea unei stări de profunzime interioară, unde pot fi identificate și transformate credințele limitatoare.</p>
+          <p>Cu empatie, claritate și respect pentru procesul tău unic, te acompaniez în călătoria către pace interioară, echilibru și reconectare cu sinele autentic.</p>
           <p><strong>Locație:</strong> Alba Iulia<br><strong>Sesiuni:</strong> Online și în persoană</p>
         </div>
       </div>
     </section>
 
-    <section id="servicii">
-      <h2>Servicii oferite</h2>
-      <div class="section-rule"></div>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>🌿 Sesiuni individuale</h3>
-          <p>Lucru personalizat pentru anxietate, blocaje emoționale, relații, carieră și claritate de viață.</p>
-          <strong>1-1 individualizată • 50 min • 150 RON</strong>
-        </div>
-        <div class="service-card">
-          <h3>💫 Curățare emoțională</h3>
-          <p>Eliberare de emoții negative, frică și traume, pentru a crea spațiu pentru vindecare și echilibru.</p>
-          <strong>1-1 individualizată • 50 min • 150 RON</strong>
-        </div>
-        <div class="service-card">
-          <h3>🧘 Vindecare energetică</h3>
-          <p>Reechilibrare a energiei tale și reconectare cu sursa ta interioară de putere și sens.</p>
-          <strong>1-1 individualizată • 50 min • 150 RON</strong>
-        </div>
-        <div class="service-card">
-          <h3>✨ Dezvoltare personală</h3>
-          <p>Te sprijin să depășești limitele interne și să construiești o viață mai autentică și împlinită.</p>
-          <strong>1-1 individualizată • 50 min • 150 RON</strong>
-        </div>
-      </div>
-    </section>
-
-    <section id="beneficii">
-      <h2>De ce să alegi o sesiune cu Adriana</h2>
-      <div class="section-rule"></div>
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <span class="icon">💛</span>
-          <h3>Abordare empatică</h3>
-          <p>Te susțin într-un spațiu sigur, fără judecată, unde poți să te exprimi liber.</p>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">🌱</span>
-          <h3>Proces personalizat</h3>
-          <p>Fiecare sesiune este adaptată nevoilor tale reale și ritmului tău de vindecare.</p>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">🧠</span>
-          <h3>Claritate emoțională</h3>
-          <p>Îți ajută să identifice blocajele și credințele care te limitează în viață.</p>
-        </div>
-        <div class="benefit-item">
-          <span class="icon">✨</span>
-          <h3>Reconectare cu sinele</h3>
-          <p>Îți redai spațiu pentru liniște, energie, intenție și autenticitate.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Cum arată o sesiune</h2>
-      <div class="section-rule"></div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Întâlnire inițială</h3>
-          <p>Discutăm ceea ce simți, ce te împovărează și ce ai dori să schimbi în viața ta.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Conexiune și vindecare</h3>
-          <p>Explorăm blocajele emoționale și lucrăm la nivel energetic pentru eliberare și echilibru.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Îndrumare clară</h3>
-          <p>Îți ofer recomandări simple pentru a păstra senzația de calm și continuitatea vindecării.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-      <h2>Experiența unei vindecări autentice</h2>
-      <div class="section-rule"></div>
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988c2477c?auto=format&fit=crop&w=900&q=80" alt="Terapie emoțională">
-          <div class="caption">Claritate emoțională</div>
-        </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Meditatie si relaxare">
-          <div class="caption">Liniște și reconectare</div>
-        </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Respirație și vindecare">
-          <div class="caption">Respirație și transformare</div>
-        </div>
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Sesiune de terapie emotionala">
-          <div class="caption">Spațiu sigur pentru vindecare</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Ce spun clienții</h2>
-      <div class="section-rule"></div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <p>“Am simțit că mă ascultă cu adevărat și că am găsit un spațiu sigur pentru a mă reconecta cu mine însămi.”</p>
-          <strong>— Elena</strong>
-        </div>
-        <div class="review-card">
-          <p>“După sesiuni am simțit o claritate amazing și o liniște pe care nu o mai simțisem de mult.”</p>
-          <strong>— Maria</strong>
-        </div>
-        <div class="review-card">
-          <p>“Procesul a fost foarte calm și profund. Mi-a ajutat să înțeleg blocajele din relații și din mine.”</p>
-          <strong>— Andreea</strong>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Întrebări frecvente</h2>
-      <div class="section-rule"></div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <strong>Pentru cine este potrivită o sesiune?</strong>
-          <p>Pentru orice persoană care simte stres, anxietate, blocaje emoționale, dificultăți în relații sau nevoie de claritate și echilibru.</p>
-        </div>
-        <div class="faq-item">
-          <strong>Se poate face online?</strong>
-          <p>Da. Sesiunile se pot desfășura online și în persoană, în funcție de preferința ta și de disponibilitate.</p>
-        </div>
-        <div class="faq-item">
-          <strong>Cât durează o sesiune?</strong>
-          <p>O sesiune durează în medie 50 de minute, fiind structurată astfel încât să fie calmă și eficientă.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="booking" class="booking-section">
+    <section id="booking" class="booking-box">
       <h2>📅 Rezervă-ți sesiunea</h2>
-      <div class="section-rule" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.3));"></div>
-      <div class="booking-container">
-        <div class="booking-info">
-          <p class="price">150 RON</p>
-          <p class="duration">Sesiune 1-1 individualizată • 50 minute</p>
+      <div class="rule" style="background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.3));"></div>
+
+      <div class="booking-card">
+        <div class="booking-summary">
+          <div class="price">150 RON</div>
+          <div>Sesiune 1-1 individualizată • 50 minute</div>
         </div>
 
-        <div class="calendar-wrapper">
-          <div class="calendar-header">
-            <button id="prevMonth" type="button">← Luna anterioară</button>
-            <span id="monthYear"></span>
-            <button id="nextMonth" type="button">Luna următoare →</button>
+        <form id="bookingForm">
+          <div class="field">
+            <label for="bookingDate">Alege data</label>
+            <input id="bookingDate" type="date" min="" required>
           </div>
 
-          <div class="calendar-grid" id="calendarGrid"></div>
-
-          <div class="time-selection" id="timeSelection" style="display:none;">
-            <label class="time-label">Alege ora (50 min):</label>
-            <div class="time-grid" id="timeGrid"></div>
+          <div class="field">
+            <label for="bookingTime">Alege ora</label>
+            <select id="bookingTime" required>
+              <option value="">Selectează ora</option>
+              <option>08:00</option>
+              <option>08:50</option>
+              <option>09:40</option>
+              <option>10:30</option>
+              <option>11:20</option>
+              <option>12:10</option>
+              <option>13:00</option>
+              <option>13:50</option>
+              <option>14:40</option>
+              <option>15:30</option>
+              <option>16:20</option>
+              <option>17:10</option>
+              <option>18:00</option>
+              <option>18:50</option>
+              <option>19:40</option>
+            </select>
           </div>
 
-          <div class="booking-buttons-container">
-            <div class="booking-buttons-header">Alege metoda de rezervare</div>
-            <div class="booking-buttons-group">
-              <button class="booking-btn whatsapp-button" id="bookingBtn" type="button" onclick="bookWhatsApp()" disabled>📲 Rezervă pe WhatsApp<br><span style="font-size:0.82rem; font-weight:600;">Confirmare rapidă prin mesaj</span></button>
-            </div>
-          </div>
-        </div>
+          <button id="whatsappBtn" class="booking-btn" type="button" disabled>📲 Rezervă pe WhatsApp</button>
+        </form>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="content-box">
       <h2>Contact &amp; rezervări</h2>
-      <div class="section-rule"></div>
-      <p style="margin-bottom: 18px; color: var(--muted);">Sunt gata să mă întâlnesc cu tine! Contactează-mă pentru a rezerva o sesiune sau pentru a afla mai multe despre ThetaHealing.</p>
-
-      <div class="contact-info">
-        <div class="contact-item">
+      <div class="rule"></div>
+      <div class="contact-grid">
+        <div class="contact-card">
           <h4>📧 Email</h4>
           <p><a href="mailto:adrianaursale29@gmail.com">adrianaursale29@gmail.com</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-card">
           <h4>📱 Telefon</h4>
           <p><a href="tel:+40768368992">0768 368 992</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-card">
           <h4>💬 WhatsApp</h4>
           <p><a href="https://wa.me/40768368992" target="_blank" rel="noopener noreferrer">Scrie pe WhatsApp</a></p>
         </div>
-        <div class="contact-item">
+        <div class="contact-card">
           <h4>📍 Locație</h4>
-          <p>Alba Iulia, România<br><em>Sesiuni online disponibile</em></p>
+          <p>Alba Iulia, România</p>
         </div>
       </div>
 
-      <div class="contact-buttons">
-        <a href="tel:+40768368992" class="cta-button">📞 Apelează</a>
-        <a href="https://wa.me/40768368992" target="_blank" rel="noopener noreferrer" class="cta-button">💬 WhatsApp</a>
-        <a href="mailto:adrianaursale29@gmail.com" class="cta-button">📧 Email</a>
+      <div class="contact-links">
+        <a href="tel:+40768368992" class="cta">📞 Apelează</a>
+        <a href="https://wa.me/40768368992" target="_blank" rel="noopener noreferrer" class="cta">💬 WhatsApp</a>
+        <a href="mailto:adrianaursale29@gmail.com" class="cta">📧 Email</a>
       </div>
     </section>
-  </main>
+  </div>
 
   <footer>
     <p>&copy; 2026 Adriana Ursales - ThetaHealing Alba Iulia. Toate drepturile rezervate.</p>
@@ -844,182 +429,33 @@
   </footer>
 
   <script>
-    let selectedDate = null;
-    let selectedTime = null;
-    let currentMonth = new Date();
+    const bookingDate = document.getElementById('bookingDate');
+    const bookingTime = document.getElementById('bookingTime');
+    const whatsappBtn = document.getElementById('whatsappBtn');
 
-    const times = ['08:00', '08:50', '09:40', '10:30', '11:20', '12:10', '13:00', '13:50', '14:40', '15:30', '16:20', '17:10', '18:00', '18:50', '19:40'];
+    const today = new Date();
+    const minDate = new Date(today);
+    minDate.setHours(0, 0, 0, 0);
+    bookingDate.min = minDate.toISOString().split('T')[0];
 
-    function getDateKey(date) {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
+    function checkBookingState() {
+      const valid = bookingDate.value && bookingTime.value;
+      whatsappBtn.disabled = !valid;
     }
 
-    function getMinutesFromTime(time) {
-      const [hours, minutes] = time.split(':').map(Number);
-      return hours * 60 + minutes;
-    }
+    bookingDate.addEventListener('change', checkBookingState);
+    bookingTime.addEventListener('change', checkBookingState);
 
-    function buildBookedDates() {
-      const result = {};
-      const today = new Date();
-      const offsets = [2, 5, 9, 14, 19, 24];
-
-      offsets.forEach(offset => {
-        const date = new Date(today);
-        date.setDate(today.getDate() + offset);
-        result[getDateKey(date)] = ['08:00', '11:20', '16:20'];
-      });
-
-      return result;
-    }
-
-    const bookedTimesByDate = buildBookedDates();
-    const bookedDates = Object.keys(bookedTimesByDate);
-
-    function isOutOfHours() {
-      const now = new Date();
-      const currentMinutes = now.getHours() * 60 + now.getMinutes();
-      return currentMinutes < 8 * 60 || currentMinutes >= 20 * 60;
-    }
-
-    function getDaysInMonth(date) {
-      return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-    }
-
-    function getFirstDayOfMonth(date) {
-      return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-    }
-
-    function renderCalendar() {
-      const grid = document.getElementById('calendarGrid');
-      grid.innerHTML = '';
-
-      const dayNames = ['Dum', 'Lun', 'Mar', 'Mie', 'Joi', 'Vin', 'Sâm'];
-      dayNames.forEach(day => {
-        const dayEl = document.createElement('div');
-        dayEl.className = 'day-name';
-        dayEl.textContent = day;
-        grid.appendChild(dayEl);
-      });
-
-      const firstDay = getFirstDayOfMonth(currentMonth);
-      const daysInMonth = getDaysInMonth(currentMonth);
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-
-      for (let i = 0; i < firstDay; i++) {
-        const emptyEl = document.createElement('div');
-        grid.appendChild(emptyEl);
-      }
-
-      for (let day = 1; day <= daysInMonth; day++) {
-        const dateBtn = document.createElement('button');
-        dateBtn.type = 'button';
-        dateBtn.className = 'date-btn';
-        dateBtn.textContent = day;
-
-        const currentDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
-        currentDate.setHours(0, 0, 0, 0);
-
-        const dateKey = getDateKey(currentDate);
-        const isPast = currentDate < today;
-        const isBooked = bookedDates.includes(dateKey);
-
-        if (isPast || isBooked) {
-          dateBtn.disabled = true;
-          dateBtn.classList.add('disabled');
-        } else {
-          dateBtn.onclick = () => selectDate(currentDate, dateBtn);
-        }
-
-        grid.appendChild(dateBtn);
-      }
-
-      document.getElementById('monthYear').textContent = currentMonth.toLocaleDateString('ro-RO', { month: 'long', year: 'numeric' });
-    }
-
-    function selectDate(date, element) {
-      document.querySelectorAll('.date-btn').forEach(btn => btn.classList.remove('active'));
-      element.classList.add('active');
-
-      selectedDate = new Date(date);
-      selectedDate.setHours(0, 0, 0, 0);
-      selectedTime = null;
-
-      renderTimeGrid();
-      document.getElementById('timeSelection').style.display = 'block';
-      document.getElementById('bookingBtn').disabled = true;
-    }
-
-    function renderTimeGrid() {
-      const timeGrid = document.getElementById('timeGrid');
-      timeGrid.innerHTML = '';
-
-      const dateKey = getDateKey(selectedDate);
-      const now = new Date();
-      const isToday = dateKey === getDateKey(now);
-
-      times.forEach(time => {
-        const timeBtn = document.createElement('button');
-        timeBtn.type = 'button';
-        timeBtn.className = 'time-btn';
-        timeBtn.textContent = time;
-
-        const isBookedTime = (bookedTimesByDate[dateKey] || []).includes(time);
-        const isPastTime = isToday && getMinutesFromTime(time) <= getMinutesFromTime(`${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`);
-
-        if (isBookedTime || isPastTime || isOutOfHours()) {
-          timeBtn.disabled = true;
-          timeBtn.classList.add('disabled');
-        } else {
-          timeBtn.onclick = () => selectTime(time, timeBtn);
-        }
-
-        timeGrid.appendChild(timeBtn);
-      });
-    }
-
-    function selectTime(time, element) {
-      document.querySelectorAll('.time-btn').forEach(btn => btn.classList.remove('active'));
-      element.classList.add('active');
-      selectedTime = time;
-
-      if (!isOutOfHours()) {
-        document.getElementById('bookingBtn').disabled = false;
-      }
-    }
-
-    function bookWhatsApp() {
-      if (!selectedDate || !selectedTime) {
+    whatsappBtn.addEventListener('click', function () {
+      if (!bookingDate.value || !bookingTime.value) {
         alert('Alege data și ora!');
         return;
       }
 
-      if (isOutOfHours()) {
-        alert('Te rugăm să alegi un alt interval disponibil.');
-        return;
-      }
-
-      const dateStr = selectedDate.toLocaleDateString('ro-RO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-      const message = `Bună! Aș vrea să rezerv o sesiune de Terapie Emoțională pentru ${dateStr} la ora ${selectedTime}. Sesiune 1-1 Individualizată - 50 min - 150 RON.`;
-      const encoded = encodeURIComponent(message);
-      window.open(`https://wa.me/40768368992?text=${encoded}`, '_blank');
-    }
-
-    document.getElementById('prevMonth').onclick = () => {
-      currentMonth.setMonth(currentMonth.getMonth() - 1);
-      renderCalendar();
-    };
-
-    document.getElementById('nextMonth').onclick = () => {
-      currentMonth.setMonth(currentMonth.getMonth() + 1);
-      renderCalendar();
-    };
-
-    renderCalendar();
+      const message = `Bună ziua! Vreau să rezerv o sesiune de ThetaHealing la data de ${bookingDate.value} la ora ${bookingTime.value}.`;
+      const url = `https://wa.me/40768368992?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
   </script>
 </body>
 </html>
