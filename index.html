@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Adriana Ursales | ThetaHealing - Terapie emoțională</title>
+  <meta name="description" content="Sesiuni ThetaHealing în Alba Iulia și online. Claritate emoțională, vindecare profundă și reconectare cu sinele autentic.">
   <style>
     :root {
       --mauve: #7d5f7b;
@@ -18,6 +19,7 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -25,6 +27,8 @@
       color: var(--text);
       line-height: 1.7;
     }
+
+    a { color: inherit; }
 
     .wrap {
       max-width: 1100px;
@@ -108,7 +112,7 @@
       border: 1px solid rgba(125,95,123,0.2);
     }
 
-    .cta:hover, .secondary:hover, .booking-btn:hover {
+    .cta:hover, .secondary:hover, .booking-btn:hover, .whatsapp-float:hover {
       transform: translateY(-2px);
     }
 
@@ -179,6 +183,65 @@
     .highlight {
       color: var(--mauve);
       font-weight: 700;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .step-card {
+      background: linear-gradient(180deg, #fffaf8 0%, #f8f4f3 100%);
+      border-radius: 22px;
+      border: 1px solid rgba(125,95,123,0.05);
+      padding: 22px 20px;
+      position: relative;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .step-card h3 {
+      margin: 12px 0 8px;
+      color: var(--mauve-deep);
+      font-size: 1.2rem;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(125,95,123,0.96) 0%, rgba(216,183,172,0.96) 100%);
+      border-radius: 28px;
+      color: #fff;
+      padding: 28px 22px;
+      text-align: center;
+      margin-bottom: 28px;
+      box-shadow: 0 18px 35px rgba(125,95,123,0.16);
+    }
+
+    .cta-banner h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+    }
+
+    .cta-banner p {
+      margin: 0 auto 18px;
+      max-width: 680px;
+      opacity: 0.95;
     }
 
     .booking-box {
@@ -296,6 +359,24 @@
       margin-top: 26px;
     }
 
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 14px 30px rgba(18,140,126,0.35);
+      text-decoration: none;
+      z-index: 999;
+    }
+
     footer {
       text-align: center;
       color: white;
@@ -349,6 +430,34 @@
         </div>
       </div>
     </section>
+
+    <section class="content-box">
+      <h2>Cum decurge o sesiune?</h2>
+      <div class="rule"></div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Întâlnire inițială</h3>
+          <p>Discutăm despre ce simți și ce ai dori să schimbăm împreună.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Conexiune și vindecare</h3>
+          <p>Lucrăm la nivel emoțional și energetic pentru eliberare și echilibru.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Îndrumare clară</h3>
+          <p>Îți ofer un traseu calm și eficient pentru a continua procesul acasă.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-banner">
+      <h3>Vrei să începi acum?</h3>
+      <p>Îți pot sprijini procesul de vindecare într-un spațiu sigur, calm și personalizat, online sau în persoană.</p>
+      <a href="#booking" class="cta">Rezervă o sesiune</a>
+    </div>
 
     <section id="booking" class="booking-box">
       <h2>📅 Rezervă-ți sesiunea</h2>
@@ -422,6 +531,8 @@
       </div>
     </section>
   </div>
+
+  <a class="whatsapp-float" href="https://wa.me/40768368992?text=Bun%C4%83%20ziua!%20Vreau%20s%C4%83%20rezerv%20o%20sesiune%20de%20ThetaHealing." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
 
   <footer>
     <p>&copy; 2026 Adriana Ursales - ThetaHealing Alba Iulia. Toate drepturile rezervate.</p>
