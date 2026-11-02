@@ -7,17 +7,20 @@
   <meta name="description" content="Sesiuni ThetaHealing în Alba Iulia și online. Claritate emoțională, vindecare profundă și reconectare cu sinele autentic.">
   <style>
     :root {
+      --ivory: #f8f3f0;
+      --ivory-strong: #f3ece7;
+      --blush: #f0d9d1;
+      --rose: #d9b0a3;
       --mauve: #7d5f7b;
-      --mauve-deep: #55455d;
-      --rose: #d8b7ac;
-      --sand: #efe3d5;
-      --ivory: #f9f5f2;
+      --mauve-deep: #55445d;
+      --taupe: #726267;
+      --gold: #c9a96b;
+      --gold-soft: #e7d2a7;
       --text: #2d282d;
-      --muted: #5f5a5c;
-      --gold: #c8a96a;
+      --muted: #5d595d;
       --white: #fff;
       --shadow-soft: 0 20px 45px rgba(58, 44, 57, 0.08);
-      --shadow-strong: 0 25px 55px rgba(125, 95, 123, 0.16);
+      --shadow-strong: 0 26px 60px rgba(125, 95, 123, 0.16);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -28,7 +31,7 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(180deg, #f7f3f0 0%, #faf6f4 100%);
+      background: radial-gradient(circle at top, #fdfaf8 0%, #f8f1ee 28%, #f4efe9 100%);
       color: var(--text);
       line-height: 1.7;
     }
@@ -43,12 +46,13 @@
     }
 
     header {
-      background: linear-gradient(135deg, #f3ece8 0%, #f8f4f1 52%, #f5edf2 100%);
+      background: linear-gradient(135deg, #f4ece8 0%, #f8f4f1 52%, #f6eef3 100%);
       border-radius: var(--radius-xl);
       padding: 34px 28px 28px;
       box-shadow: var(--shadow-soft);
       margin-bottom: 28px;
       overflow: hidden;
+      border: 1px solid rgba(125, 95, 123, 0.06);
     }
 
     .hero {
@@ -74,16 +78,17 @@
 
     h1 {
       font-size: clamp(2.4rem, 4.3vw, 4rem);
-      line-height: 1.1;
+      line-height: 1.08;
       font-weight: 300;
       margin: 0 0 12px;
       color: var(--text);
+      letter-spacing: -0.03em;
     }
 
     .subtitle {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: var(--muted);
-      margin: 0 0 22px;
+      margin: 0 0 24px;
       max-width: 660px;
     }
 
@@ -110,11 +115,11 @@
     .cta {
       background: linear-gradient(135deg, var(--mauve) 0%, var(--rose) 100%);
       color: var(--white);
-      box-shadow: 0 16px 28px rgba(125, 95, 123, 0.22);
+      box-shadow: 0 16px 30px rgba(125, 95, 123, 0.2);
     }
 
     .secondary {
-      background: rgba(255,255,255,0.42);
+      background: rgba(255,255,255,0.46);
       border: 1px solid rgba(125,95,123,0.18);
       color: var(--mauve-deep);
     }
@@ -126,7 +131,7 @@
     .photo-card {
       flex: 1 1 300px;
       max-width: 360px;
-      background: rgba(255,255,255,0.76);
+      background: rgba(255,255,255,0.8);
       border: 1px solid rgba(125,95,123,0.08);
       border-radius: 28px;
       padding: 16px;
